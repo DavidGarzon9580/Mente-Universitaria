@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Organización manual y generación asistida de un plan de bienestar.">
+  <link rel="icon" href="../assets/img/hoja.png" type="image/png">
+  <title>Mi plan | Mente Universitaria</title>
+</head>
+<body>
+  <header>
+    <a href="../index.html" aria-label="Ir al inicio de Mente Universitaria"><img src="../assets/img/hoja.png" alt="" width="48" height="48"><span>Mente Universitaria</span></a>
+    <nav aria-label="Navegación principal"><ul><li><a href="../index.html">Inicio</a></li><li><a href="encuesta.html">Encuesta</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="mi-pausa.html">Mi pausa</a></li><li><a href="mi-plan.html" aria-current="page">Mi plan</a></li><li><a href="buscar-apoyo.html">Buscar apoyo</a></li></ul></nav>
+    <details>
+      <summary>Opciones de accesibilidad</summary>
+      <form>
+        <fieldset><legend>Contraste</legend><label><input type="radio" name="contraste" value="claro" checked> Claro</label><label><input type="radio" name="contraste" value="oscuro"> Oscuro</label><label><input type="radio" name="contraste" value="alto"> Alto contraste</label></fieldset>
+        <label for="tamano-texto-plan">Tamaño del texto</label><select id="tamano-texto-plan" name="tamano-texto"><option>85 %</option><option>90 %</option><option>95 %</option><option selected>100 %</option><option>125 %</option><option>150 %</option><option>200 %</option></select>
+      </form>
+    </details>
+  </header>
+
+  <main id="contenido-principal">
+    <nav aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li aria-current="page">Mi plan</li></ol></nav>
+    <header><h1>Mi plan de bienestar</h1><p>Organiza actividades realistas y marca los avances alcanzados.</p></header>
+
+    <section aria-labelledby="plan-actual-titulo">
+      <h2 id="plan-actual-titulo">Plan actual</h2><p>Estado inicial: todavía no existen actividades guardadas.</p>
+      <article><h3>Ejemplo de actividad</h3><label><input type="checkbox" name="actividad-ejemplo"> Respirar durante 3 minutos el lunes</label></article>
+    </section>
+
+    <section id="actividad-manual" aria-labelledby="actividad-manual-titulo">
+      <h2 id="actividad-manual-titulo">Añadir una actividad manual</h2>
+      <form action="#plan-actual-titulo" method="get">
+        <label for="nombre-actividad">Nombre de la actividad</label>
+        <input id="nombre-actividad" name="nombre-actividad" type="text" required minlength="3" maxlength="60" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü0-9 ,.'-]{3,60}" title="Escribe entre 3 y 60 caracteres válidos.">
+        <label for="dia-actividad">Día</label>
+        <select id="dia-actividad" name="dia-actividad" required><option value="">Selecciona un día</option><option>Lunes</option><option>Martes</option><option>Miércoles</option><option>Jueves</option><option>Viernes</option><option>Sábado</option><option>Domingo</option></select>
+        <label for="duracion-actividad">Duración en minutos</label>
+        <input id="duracion-actividad" name="duracion-actividad" type="number" min="1" max="120" required>
+        <button type="submit">Agregar al plan</button>
+      </form>
+    </section>
+
+    <aside id="generador-ia" aria-labelledby="ia-titulo">
+      <h2 id="ia-titulo">Crear un plan con inteligencia artificial</h2>
+      <p>El generador analizará las preferencias, consultará actividades del catálogo y propondrá una distribución semanal. No realizará diagnósticos ni sustituirá el acompañamiento profesional.</p>
+    </aside>
+
+    <section aria-labelledby="preferencias-titulo">
+      <h2 id="preferencias-titulo">Preferencias para generar el plan</h2>
+      <form action="#propuesta-plan" method="get">
+        <label for="titulo-plan">Título del plan</label>
+        <input id="titulo-plan" name="titulo-plan" type="text" required minlength="3" maxlength="60" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü0-9 ,.'-]{3,60}" title="Escribe entre 3 y 60 caracteres válidos.">
+        <label for="objetivo-plan">¿Qué quieres cuidar?</label>
+        <select id="objetivo-plan" name="objetivo-plan" required><option value="">Selecciona un objetivo</option><option value="organizacion">Organización</option><option value="descanso">Descanso</option><option value="concentracion">Concentración</option><option value="pausas">Pausas</option></select>
+        <label for="tiempo-plan">Tiempo disponible por día</label>
+        <select id="tiempo-plan" name="tiempo-plan" required><option value="">Selecciona el tiempo</option><option value="5">5 minutos</option><option value="10">10 minutos</option><option value="15">15 minutos</option><option value="20">20 minutos</option></select>
+        <label for="energia-plan">Energía disponible</label>
+        <select id="energia-plan" name="energia-plan" required><option value="">Selecciona una opción</option><option value="baja">Baja</option><option value="media">Media</option><option value="alta">Alta</option></select>
+        <fieldset>
+          <legend>Días disponibles</legend>
+          <label><input type="checkbox" name="dias" value="lunes"> Lunes</label><label><input type="checkbox" name="dias" value="martes"> Martes</label><label><input type="checkbox" name="dias" value="miercoles"> Miércoles</label><label><input type="checkbox" name="dias" value="jueves"> Jueves</label><label><input type="checkbox" name="dias" value="viernes"> Viernes</label><label><input type="checkbox" name="dias" value="sabado"> Sábado</label><label><input type="checkbox" name="dias" value="domingo"> Domingo</label>
+        </fieldset>
+        <label for="notas-plan">Información adicional opcional</label><textarea id="notas-plan" name="notas-plan" rows="5" cols="50" maxlength="500"></textarea>
+        <label><input type="checkbox" name="autoriza-resumen" value="si"> Autorizo usar el resumen de mi encuesta para personalizar esta solicitud.</label>
+        <button type="submit">Generar propuesta</button>
+      </form>
+    </section>
+
+    <section id="propuesta-plan" aria-labelledby="propuesta-titulo">
+      <h2 id="propuesta-titulo">Ejemplo de propuesta generada</h2>
+      <ul><li>Lunes: dividir una entrega en tres pasos — 5 minutos.</li><li>Miércoles: hacer una pausa antes de estudiar — 5 minutos.</li><li>Viernes: preparar el cierre de la semana — 10 minutos.</li></ul>
+      <details><summary>Cómo actuará el componente de IA</summary><ol><li>Analizará el objetivo, el tiempo, la energía y los días.</li><li>Solicitará una herramienta para buscar actividades compatibles.</li><li>Solicitará una herramienta para componer el plan.</li><li>El servidor validará las actividades y su duración antes de mostrar el resultado.</li></ol></details>
+    </section>
+  </main>
+
+  <footer>
+    <nav aria-label="Mapa del sitio"><h2>Mapa del sitio</h2><ul><li><a href="../index.html">Inicio</a></li><li><a href="encuesta.html">Encuesta de bienestar</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="mi-pausa.html">Mi pausa</a></li><li><a href="mi-plan.html">Mi plan</a></li><li><a href="buscar-apoyo.html">Buscar apoyo</a></li></ul></nav>
+    <p>Proyecto académico de Programación Web I.</p><p><small>&copy; 2026 Mente Universitaria.</small></p>
+  </footer>
+</body>
+</html>
