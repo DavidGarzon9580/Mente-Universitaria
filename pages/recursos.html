@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Recursos educativos de bienestar y organización para estudiantes.">
+  <link rel="icon" href="../assets/img/hoja.png" type="image/png">
+  <title>Recursos | Mente Universitaria</title>
+</head>
+<body>
+  <header>
+    <a href="../index.html" aria-label="Ir al inicio de Mente Universitaria">
+      <img src="../assets/img/hoja.png" alt="" width="48" height="48"><span>Mente Universitaria</span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li><li><a href="encuesta.html">Encuesta</a></li>
+        <li><a href="recursos.html" aria-current="page">Recursos</a></li><li><a href="mi-pausa.html">Mi pausa</a></li>
+        <li><a href="mi-plan.html">Mi plan</a></li><li><a href="buscar-apoyo.html">Buscar apoyo</a></li>
+      </ul>
+    </nav>
+    <details>
+      <summary>Opciones de accesibilidad</summary>
+      <form>
+        <fieldset><legend>Contraste</legend><label><input type="radio" name="contraste" value="claro" checked> Claro</label><label><input type="radio" name="contraste" value="oscuro"> Oscuro</label><label><input type="radio" name="contraste" value="alto"> Alto contraste</label></fieldset>
+        <label for="tamano-texto-recursos">Tamaño del texto</label>
+        <select id="tamano-texto-recursos" name="tamano-texto"><option>85 %</option><option>90 %</option><option>95 %</option><option selected>100 %</option><option>125 %</option><option>150 %</option><option>200 %</option></select>
+      </form>
+    </details>
+  </header>
+
+  <main id="contenido-principal">
+    <nav aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li aria-current="page">Recursos</li></ol></nav>
+    <header>
+      <h1>Recursos para tu bienestar</h1>
+      <p>Ideas prácticas para organizarte, descansar y acompañar lo que sientes.</p>
+      <figure>
+        <img src="../assets/img/portada-recursos.png" alt="Elementos de estudio y bienestar organizados sobre una mesa" width="640" height="360">
+        <figcaption>Consulta los contenidos por tema y tiempo disponible.</figcaption>
+      </figure>
+    </header>
+
+    <form action="#lista-recursos" method="get" role="search">
+      <label for="buscar-recurso">Buscar por tema o situación</label>
+      <input id="buscar-recurso" name="busqueda" type="search" placeholder="Ejemplo: organizar entregas">
+      <label for="categoria-recurso">Categoría</label>
+      <select id="categoria-recurso" name="categoria">
+        <option value="todas">Todas</option><option value="organizacion">Organización</option><option value="descanso">Descanso</option><option value="pausas">Pausas</option><option value="apoyo">Apoyo</option>
+      </select>
+      <label for="duracion-recurso">Tiempo disponible</label>
+      <select id="duracion-recurso" name="duracion">
+        <option value="cualquiera">Cualquier duración</option><option value="5">Hasta 5 minutos</option><option value="10">Hasta 10 minutos</option><option value="15">Hasta 15 minutos</option>
+      </select>
+      <button type="submit">Buscar</button>
+    </form>
+
+    <article aria-labelledby="destacado-titulo">
+      <img src="../assets/img/recurso-destacado.png" alt="Persona revisando una lista de tareas" width="480" height="320">
+      <h2 id="destacado-titulo">Cómo empezar cuando tienes demasiados pendientes</h2>
+      <p>Ordena lo urgente, elige un primer paso y recupera sensación de avance.</p>
+      <ol><li>Escribe la entrega que más te preocupa.</li><li>Divídela en investigar, producir y revisar.</li><li>Elige una primera acción que puedas iniciar hoy.</li></ol>
+    </article>
+
+    <section id="lista-recursos" aria-labelledby="lista-recursos-titulo">
+      <h2 id="lista-recursos-titulo">Todos los recursos</h2>
+      <article>
+        <img src="../assets/img/recurso-organizacion.png" alt="Agenda con una lista de actividades" width="360" height="240">
+        <h3>Divide tus entregas en pasos</h3><p>Convierte una tarea grande en tres acciones pequeñas.</p><p><strong>Categoría:</strong> Organización. <strong>Duración:</strong> 5 minutos.</p>
+      </article>
+      <article>
+        <img src="../assets/img/recurso-presion.png" alt="Estudiante tomando una pausa antes de continuar" width="360" height="240">
+        <h3>Una pausa antes del parcial</h3><p>Respira, revisa tu prioridad y vuelve a una sola tarea.</p><p><strong>Categoría:</strong> Pausas. <strong>Duración:</strong> 5 minutos.</p>
+      </article>
+      <article>
+        <img src="../assets/img/recurso-descanso.png" alt="Persona descansando después de estudiar" width="360" height="240">
+        <h3>Organiza una semana posible</h3><p>Distribuye compromisos dejando espacio para descansar y trasladarte.</p><p><strong>Categoría:</strong> Organización. <strong>Duración:</strong> 10 minutos.</p>
+      </article>
+    </section>
+
+    <aside aria-labelledby="estados-api-titulo">
+      <h2 id="estados-api-titulo">Estados previstos al consumir la API</h2>
+      <ul><li>Cargando recursos.</li><li>No se encontraron resultados.</li><li>No fue posible consultar el catálogo.</li></ul>
+    </aside>
+  </main>
+
+  <footer>
+    <nav aria-label="Mapa del sitio"><h2>Mapa del sitio</h2><ul>
+      <li><a href="../index.html">Inicio</a></li><li><a href="encuesta.html">Encuesta de bienestar</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="mi-pausa.html">Mi pausa</a></li><li><a href="mi-plan.html">Mi plan</a></li><li><a href="buscar-apoyo.html">Buscar apoyo</a></li>
+    </ul></nav>
+    <p>Proyecto académico de Programación Web I.</p><p><small>&copy; 2026 Mente Universitaria.</small></p>
+  </footer>
+</body>
+</html>
