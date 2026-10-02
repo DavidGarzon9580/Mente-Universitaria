@@ -1,0 +1,104 @@
+/* Estilos de mi-pausa. */
+.pause-heading {
+  padding: 2.5rem 2rem;
+  background: var(--color-lavender);
+  text-align: center;
+}
+.pause-heading .pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tab-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+  padding: 0.3rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+}
+.tab-list button {
+  min-height: 2.75rem;
+  padding: 0.65rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text);
+  font-weight: 750;
+}
+.tab-list button[aria-selected=true] {
+  background: var(--color-brand);
+  color: var(--color-on-brand);
+}
+.pause-workspace {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: clamp(1.5rem, 5vw, 3rem);
+  align-items: center;
+  min-height: 24rem;
+  margin-bottom: 2rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+.pause-workspace--simple {
+  grid-template-columns: 1fr;
+}
+.breathing-visual {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  width: min(100%, 18rem);
+  margin-inline: auto;
+  border: 1.5rem solid var(--color-mint);
+  border-radius: 50%;
+  background: var(--color-brand);
+  color: var(--color-on-brand);
+  font-family: var(--font-heading);
+  font-size: clamp(1.5em, 4vw, 2.3em);
+  font-weight: 800;
+  transition: transform 4s ease-in-out;
+}
+.breathing-visual.is-inhaling {
+  transform: scale(1.08);
+}
+.pause-workspace__content {
+  display: grid;
+  gap: 0.75rem;
+}
+.pause-workspace__content h2,
+.pause-workspace__content p {
+  margin-bottom: 0;
+}
+.timer {
+  color: var(--color-text);
+  font-size: 1.5em;
+  font-weight: 850;
+}
+.pause-progress {
+  height: 0.75rem;
+}
+.completion-message {
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-mint);
+  color: var(--color-brand-strong);
+  font-weight: 700;
+}
+.quick-pause-grid {
+  margin-top: 1rem;
+}
+.quick-pause-grid article {
+  padding: 1.2rem;
+}
+.quick-pause-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: 1rem;
+}
+@media (max-width: 48rem) {
+  .tab-list {
+    grid-template-columns: 1fr;
+    border-radius: 1rem;
+  }
+}
