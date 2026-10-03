@@ -1,61 +1,187 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Actividades breves de respiración, escritura y organización.">
-  <link rel="icon" href="../assets/img/hoja.png" type="image/png">
-  <title>Mi pausa | Mente Universitaria</title>
-</head>
-<body>
-  <header>
-    <a href="../index.html" aria-label="Ir al inicio de Mente Universitaria"><img src="../assets/img/hoja.png" alt="" width="48" height="48"><span>Mente Universitaria</span></a>
-    <nav aria-label="Navegación principal"><ul>
-      <li><a href="../index.html">Inicio</a></li><li><a href="encuesta.html">Encuesta</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="mi-pausa.html" aria-current="page">Mi pausa</a></li><li><a href="mi-plan.html">Mi plan</a></li><li><a href="buscar-apoyo.html">Buscar apoyo</a></li>
-    </ul></nav>
-    <details>
-      <summary>Opciones de accesibilidad</summary>
-      <form>
-        <fieldset><legend>Contraste</legend><label><input type="radio" name="contraste" value="claro" checked> Claro</label><label><input type="radio" name="contraste" value="oscuro"> Oscuro</label><label><input type="radio" name="contraste" value="alto"> Alto contraste</label></fieldset>
-        <label for="tamano-texto-pausa">Tamaño del texto</label><select id="tamano-texto-pausa" name="tamano-texto"><option>85 %</option><option>90 %</option><option>95 %</option><option selected>100 %</option><option>125 %</option><option>150 %</option><option>200 %</option></select>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Recursos, pausas y planes de autocuidado para estudiantes universitarios.">
+    <meta name="theme-color" content="#1b6b5a">
+    <title>Mi pausa | Mente Universitaria</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/comun.css">
+    <link rel="stylesheet" href="../css/mi-pausa.css">
+    <script defer src="../js/app.bundle.js"></script>
+  </head>
+  <body data-theme="light" data-page="mi-pausa">
+    <a class="skip-link" href="#app-main">Saltar al contenido principal</a>
+
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="brand" href="../index.html" aria-label="Mente Universitaria, ir al inicio">
+          <img class="brand__mark" src="../assets/icons/leaf.png" width="23" height="23" alt="">
+          <span class="brand__name">Mente<br>Universitaria</span>
+        </a>
+        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+          <span aria-hidden="true">☰</span><span class="visually-hidden">Abrir menú</span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Navegación principal" data-navigation>
+          <a href="../index.html">Inicio</a>
+          <a href="./encuesta.html">Encuesta</a>
+          <a href="./recursos.html">Recursos</a>
+          <a href="./mi-pausa.html" aria-current="page">Mi pausa</a>
+          <a href="./mi-plan.html">Mi plan</a>
+          <a href="./buscar-apoyo.html">Buscar apoyo</a>
+        </nav>
+        <div class="site-header__actions">
+          <button class="accessibility-button" type="button" data-open-accessibility aria-label="Abrir opciones de accesibilidad"><span aria-hidden="true">A</span></button>
+        </div>
+      </div>
+    </header>
+
+    <main id="app-main" tabindex="-1">
+      <section id="page-mi-pausa" class="page" data-page="mi-pausa" aria-labelledby="pause-title">
+        <nav class="breadcrumbs" aria-label="Migas de pan">
+          <ol><li><a href="../index.html">Inicio</a></li><li aria-current="page">Mi pausa</li></ol>
+        </nav>
+
+        <header class="pause-heading">
+          <h1 id="pause-title">Mi pausa</h1>
+          <p>Regálate unos minutos para respirar, escribir o volver a enfocarte.</p>
+          <ul class="pill-list" role="list"><li>✦ A tu ritmo</li><li>✦ Sin juicios</li><li>✦ Solo para ti</li></ul>
+        </header>
+
+        <div class="content-section">
+          <div class="tab-list" role="tablist" aria-label="Tipo de pausa">
+            <button id="pause-tab-breathing" type="button" role="tab" aria-selected="true" aria-controls="pause-panel-breathing" tabindex="0" data-pause-tab="breathing">Respirar</button>
+            <button id="pause-tab-writing" type="button" role="tab" aria-selected="false" aria-controls="pause-panel-writing" tabindex="-1" data-pause-tab="writing">Escribir</button>
+            <button id="pause-tab-organizing" type="button" role="tab" aria-selected="false" aria-controls="pause-panel-organizing" tabindex="-1" data-pause-tab="organizing">Organizar</button>
+          </div>
+
+          <section id="pause-panel-breathing" class="card pause-workspace" role="tabpanel" data-pause-panel="breathing" aria-labelledby="pause-tab-breathing breathing-title">
+            <div class="breathing-visual" data-breathing-visual><span data-breathing-instruction>A tu ritmo</span></div>
+            <div class="pause-workspace__content">
+              <h2 id="breathing-title">Respira conmigo</h2>
+              <p>Sigue el círculo. No necesitas hacerlo perfecto.</p>
+              <p class="timer" data-pause-timer>03:00</p>
+              <label class="form-field">
+                <span>Duración</span>
+                <select data-pause-duration>
+                  <option value="60">1 minuto</option>
+                  <option value="120">2 minutos</option>
+                  <option value="180" selected>3 minutos</option>
+                </select>
+              </label>
+              <progress class="pause-progress" data-pause-progress max="180" value="0">0 de 180 segundos</progress>
+              <div class="button-row">
+                <button class="button button--primary" type="button" data-toggle-pause>Empezar pausa</button>
+                <button class="button button--secondary" type="button" data-reset-pause>Reiniciar</button>
+              </div>
+              <p class="completion-message" data-pause-complete role="status" hidden>Pausa completada. Reconoce este momento de cuidado.</p>
+            </div>
+          </section>
+
+          <section id="pause-panel-writing" class="card pause-workspace pause-workspace--simple" role="tabpanel" data-pause-panel="writing" aria-labelledby="pause-tab-writing writing-title" hidden>
+            <div class="pause-workspace__content">
+              <h2 id="writing-title">Escribe para despejarte</h2>
+              <p>Anota lo que tienes en mente. El texto permanece en esta pantalla y se borra al salir.</p>
+              <label class="form-field">
+                <span>¿Qué necesitas soltar por unos minutos?</span>
+                <textarea rows="7" maxlength="500" data-pause-writing></textarea>
+              </label>
+              <button class="button button--primary" type="button" data-clear-writing>Terminar y borrar</button>
+            </div>
+          </section>
+
+          <section id="pause-panel-organizing" class="card pause-workspace pause-workspace--simple" role="tabpanel" data-pause-panel="organizing" aria-labelledby="pause-tab-organizing organizing-title" hidden>
+            <div class="pause-workspace__content">
+              <h2 id="organizing-title">Elige solo el siguiente paso</h2>
+              <p>Escribe tres pendientes y marca cuál puede esperar.</p>
+              <ol class="simple-steps">
+                <li>Anota lo que requiere atención hoy.</li>
+                <li>Escoge una acción de menos de diez minutos.</li>
+                <li>Guarda el resto para revisarlo después.</li>
+              </ol>
+              <a class="button button--primary" href="./mi-plan.html">Agregar una actividad manual</a>
+            </div>
+          </section>
+
+          <section aria-labelledby="quick-pauses-title">
+            <h2 id="quick-pauses-title">Pausas para entre clases</h2>
+            <div class="quick-pause-grid">
+              <article class="card"><span aria-hidden="true">↕</span><h3>Estira tu cuerpo</h3><p>3 minutos para volver a ti.</p><button class="button button--secondary" type="button" data-quick-pause="180">Comenzar</button></article>
+              <article class="card"><span aria-hidden="true">◎</span><h3>Mira a tu alrededor</h3><p>2 minutos para cambiar el foco.</p><button class="button button--secondary" type="button" data-quick-pause="120">Comenzar</button></article>
+              <article class="card"><span aria-hidden="true">◌</span><h3>Toma agua con calma</h3><p>2 minutos para atenderte.</p><button class="button button--secondary" type="button" data-quick-pause="120">Comenzar</button></article>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <h2>Mente Universitaria</h2>
+        <p>Un espacio para cuidar tus hábitos durante la vida universitaria.</p>
+        <nav aria-label="Mapa del sitio">
+          <a href="../index.html">Inicio</a>
+          <a href="./encuesta.html">Encuesta</a>
+          <a href="./recursos.html">Recursos</a>
+          <a href="./mi-pausa.html">Mi pausa</a>
+          <a href="./mi-plan.html">Mi plan</a>
+          <a href="./buscar-apoyo.html">Buscar apoyo</a>
+        </nav>
+        <div class="site-footer__utilities">
+          <button type="button" data-open-accessibility>Accesibilidad</button>
+          <button type="button" data-open-data-information>Sobre tus datos</button>
+        </div>
+        <p class="site-footer__notice">Proyecto académico independiente. La orientación de bienestar no sustituye el acompañamiento profesional.</p>
+      </div>
+    </footer>
+
+
+
+    <dialog class="modal" data-accessibility-dialog aria-labelledby="accessibility-title">
+      <form method="dialog" class="modal__surface">
+        <div class="modal__header"><h2 id="accessibility-title">Accesibilidad</h2><button class="icon-button" type="submit" value="cancel" aria-label="Cerrar">×</button></div>
+        <fieldset>
+          <legend>Contraste</legend>
+          <div class="segmented-control" data-theme-options>
+            <button type="button" data-theme-value="light" aria-pressed="true">Claro</button>
+            <button type="button" data-theme-value="dark" aria-pressed="false">Oscuro</button>
+            <button type="button" data-theme-value="contrast" aria-pressed="false">Alto contraste</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Tamaño del texto</legend>
+          <div class="font-size-grid" data-font-options>
+            <button type="button" data-font-value="85">85 %</button>
+            <button type="button" data-font-value="90">90 %</button>
+            <button type="button" data-font-value="95">95 %</button>
+            <button type="button" data-font-value="100" aria-pressed="true">100 %</button>
+            <button type="button" data-font-value="125">125 %</button>
+            <button type="button" data-font-value="150">150 %</button>
+            <button type="button" data-font-value="200">200 %</button>
+          </div>
+        </fieldset>
+        <button class="button button--secondary button--wide" type="button" data-reset-accessibility>Restablecer preferencias</button>
       </form>
-    </details>
-  </header>
+    </dialog>
 
-  <main id="contenido-principal">
-    <nav aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li aria-current="page">Mi pausa</li></ol></nav>
-    <header><h1>Mi pausa</h1><p>Regálate unos minutos para respirar, escribir o volver a enfocarte.</p></header>
-
-    <nav aria-label="Tipos de pausa"><ul><li><a href="#respirar">Respirar</a></li><li><a href="#escribir">Escribir</a></li><li><a href="#organizar">Organizar</a></li></ul></nav>
-
-    <section aria-labelledby="pausas-guiadas-titulo">
-      <h2 id="pausas-guiadas-titulo">Pausas guiadas</h2>
-      <article id="respirar">
-        <h3>Respira conmigo</h3><p>Inhala durante cuatro segundos, sostén dos y exhala durante seis. Repite el ciclo sin exigirte hacerlo perfecto.</p>
-        <p><time datetime="PT3M">Duración: 3 minutos</time></p><progress max="180" value="0">0 de 180 segundos</progress><p><button type="button">Empezar pausa</button></p>
+    <dialog class="modal" data-data-dialog aria-labelledby="data-title">
+      <article class="modal__surface">
+        <div class="modal__header"><h2 id="data-title">Sobre tus datos</h2><button class="icon-button" type="button" data-close-data-information aria-label="Cerrar">×</button></div>
+        <p>La encuesta, las preferencias de accesibilidad y los planes se guardan con IndexedDB en este navegador.</p>
+        <p>No existe sincronización automática entre dispositivos. Si borras los datos del navegador, puedes perder la información que no hayas exportado.</p>
+        <p>La solicitud del generador se envía a la API propia y al servicio de IA solo cuando presionas “Generar propuesta”.</p>
       </article>
-      <article id="escribir">
-        <h3>Escribe para despejarte</h3><p>Anota lo que necesitas dejar a un lado durante unos minutos.</p>
-        <label for="texto-pausa">¿Qué necesitas soltar por ahora?</label><br><textarea id="texto-pausa" name="texto-pausa" rows="6" cols="50" maxlength="500"></textarea>
-        <p><button type="button">Terminar y borrar</button></p>
-      </article>
-      <article id="organizar">
-        <h3>Elige solo el siguiente paso</h3><ol><li>Anota lo que requiere atención hoy.</li><li>Escoge una acción de menos de diez minutos.</li><li>Guarda el resto para revisarlo después.</li></ol>
-        <p><a href="mi-plan.html#actividad-manual">Agregar una actividad a Mi plan</a></p>
-      </article>
-    </section>
+    </dialog>
 
-    <section aria-labelledby="pausas-rapidas-titulo">
-      <h2 id="pausas-rapidas-titulo">Pausas para realizar entre clases</h2>
-      <ul><li>Estira tu cuerpo durante 3 minutos.</li><li>Mira a tu alrededor durante 2 minutos.</li><li>Toma agua con calma durante 2 minutos.</li></ul>
-    </section>
+    <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
 
-    <aside aria-labelledby="aviso-pausa-titulo"><h2 id="aviso-pausa-titulo">Recuerda</h2><p>Estas actividades son educativas y voluntarias. Si necesitas orientación adicional, consulta los <a href="buscar-apoyo.html">canales de apoyo</a>.</p></aside>
-  </main>
+    <noscript>
+      <p class="noscript-message">Esta aplicación necesita JavaScript para navegar entre secciones y usar sus herramientas.</p>
+    </noscript>
 
-  <footer>
-    <nav aria-label="Mapa del sitio"><h2>Mapa del sitio</h2><ul><li><a href="../index.html">Inicio</a></li><li><a href="encuesta.html">Encuesta de bienestar</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="mi-pausa.html">Mi pausa</a></li><li><a href="mi-plan.html">Mi plan</a></li><li><a href="buscar-apoyo.html">Buscar apoyo</a></li></ul></nav>
-    <p>Proyecto académico de Programación Web I.</p><p><small>&copy; 2026 Mente Universitaria.</small></p>
-  </footer>
-</body>
+    <noscript>
+      <p class="noscript-message">Esta página necesita JavaScript para usar sus formularios y herramientas interactivas.</p>
+    </noscript>
+  </body>
 </html>

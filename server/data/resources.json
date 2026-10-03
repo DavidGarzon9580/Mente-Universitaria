@@ -1,0 +1,162 @@
+[
+  {
+    "id": "organiza-entregas",
+    "title": "Divide tus entregas en pasos",
+    "summary": "Convierte una tarea grande en tres acciones pequeñas y alcanzables.",
+    "category": "organizacion",
+    "duration": 5,
+    "energy": ["baja", "media", "alta"],
+    "type": "guia",
+    "image": "/assets/images/resource-card-1.webp",
+    "instructions": [
+      "Escribe la entrega que más te preocupa.",
+      "Divídela en investigar, producir y revisar.",
+      "Elige una primera acción que puedas iniciar hoy."
+    ],
+    "source": { "name": "Contenido educativo del proyecto", "url": null }
+  },
+  {
+    "id": "pausa-parcial",
+    "title": "Una pausa antes del parcial",
+    "summary": "Respira, revisa tu prioridad y vuelve a una sola tarea.",
+    "category": "pausas",
+    "duration": 5,
+    "energy": ["baja", "media", "alta"],
+    "type": "pausa",
+    "image": "/assets/images/resource-card-2.webp",
+    "instructions": [
+      "Aléjate de la pantalla durante un minuto.",
+      "Haz cinco respiraciones lentas.",
+      "Regresa y elige una sola pregunta o tema."
+    ],
+    "source": { "name": "Contenido educativo del proyecto", "url": null }
+  },
+  {
+    "id": "semana-posible",
+    "title": "Organiza una semana posible",
+    "summary": "Distribuye compromisos dejando espacio para comer, descansar y trasladarte.",
+    "category": "organizacion",
+    "duration": 10,
+    "energy": ["media", "alta"],
+    "type": "actividad",
+    "image": "/assets/images/resource-card-3.webp",
+    "instructions": [
+      "Ubica primero las obligaciones con horario fijo.",
+      "Reserva tiempos reales de descanso y traslado.",
+      "Añade máximo tres prioridades por día."
+    ],
+    "source": { "name": "Contenido educativo del proyecto", "url": null }
+  },
+  {
+    "id": "descanso-sin-culpa",
+    "title": "Descansa sin culpa",
+    "summary": "Planea una pausa breve como parte del estudio, no como una interrupción.",
+    "category": "descanso",
+    "duration": 5,
+    "energy": ["baja", "media"],
+    "type": "guia",
+    "image": "/assets/images/resource-featured.webp",
+    "instructions": [
+      "Define qué tarea cerrarás antes de la pausa.",
+      "Programa cinco minutos sin pantallas.",
+      "Vuelve y revisa si necesitas continuar o descansar."
+    ],
+    "source": { "name": "Contenido educativo del proyecto", "url": null }
+  },
+  {
+    "id": "primero-lo-siguiente",
+    "title": "Ponle nombre a lo siguiente",
+    "summary": "Reduce la sobrecarga eligiendo la acción concreta que viene ahora.",
+    "category": "concentracion",
+    "duration": 5,
+    "energy": ["baja", "media", "alta"],
+    "type": "actividad",
+    "image": "/assets/images/resource-card-1.webp",
+    "instructions": [
+      "Anota todo lo que tienes en mente.",
+      "Marca lo que sí debes hacer hoy.",
+      "Formula el siguiente paso con un verbo."
+    ],
+    "source": { "name": "Contenido educativo del proyecto", "url": null }
+  },
+  {
+    "id": "hablar-ayuda",
+    "title": "Hablar también ayuda",
+    "summary": "Prepara una conversación breve con una persona de confianza.",
+    "category": "apoyo",
+    "duration": 10,
+    "energy": ["baja", "media", "alta"],
+    "type": "guia",
+    "image": "/assets/images/support.webp",
+    "instructions": [
+      "Elige una persona con quien te sientas seguro o segura.",
+      "Escribe en una frase qué necesitas contar.",
+      "Propón un momento y un canal para conversar."
+    ],
+    "source": { "name": "Contenido educativo del proyecto", "url": null }
+  },
+  {
+    "id": "vuelve-presente",
+    "title": "Vuelve al presente",
+    "summary": "Usa tus sentidos para recuperar la atención durante unos minutos.",
+    "category": "concentracion",
+    "duration": 5,
+    "energy": ["baja", "media"],
+    "type": "pausa",
+    "image": "/assets/images/resource-card-2.webp",
+    "instructions": [
+      "Nombra cinco cosas que ves.",
+      "Reconoce tres sonidos cercanos.",
+      "Nota un punto de contacto de tu cuerpo con la silla o el suelo."
+    ],
+    "source": { "name": "Contenido educativo del proyecto", "url": null }
+  },
+  {
+    "id": "bloque-estudio",
+    "title": "Estudia con bloques de tiempo",
+    "summary": "Organiza un bloque corto de concentración y una pausa definida.",
+    "category": "concentracion",
+    "duration": 15,
+    "energy": ["media", "alta"],
+    "type": "actividad",
+    "image": "/assets/images/resource-card-3.webp",
+    "instructions": [
+      "Elige una tarea y silencia notificaciones.",
+      "Trabaja durante diez minutos.",
+      "Usa cinco minutos para revisar y descansar."
+    ],
+    "source": { "name": "Contenido educativo del proyecto", "url": null }
+  },
+  {
+    "id": "cierre-suave",
+    "title": "Cierra el día con suavidad",
+    "summary": "Haz una revisión corta y deja preparada la primera tarea de mañana.",
+    "category": "descanso",
+    "duration": 10,
+    "energy": ["baja", "media"],
+    "type": "actividad",
+    "image": "/assets/images/resource-hero.webp",
+    "instructions": [
+      "Reconoce algo que sí lograste hoy.",
+      "Anota lo que puede esperar hasta mañana.",
+      "Deja lista una primera acción sencilla."
+    ],
+    "source": { "name": "Contenido educativo del proyecto", "url": null }
+  },
+  {
+    "id": "pausa-agua",
+    "title": "Toma agua con calma",
+    "summary": "Interrumpe el ritmo automático y atiende una necesidad básica.",
+    "category": "pausas",
+    "duration": 5,
+    "energy": ["baja", "media", "alta"],
+    "type": "pausa",
+    "image": "/assets/images/resource-featured.webp",
+    "instructions": [
+      "Levántate sin mirar el teléfono.",
+      "Sirve agua y bébela despacio.",
+      "Antes de volver, relaja hombros y mandíbula."
+    ],
+    "source": { "name": "Contenido educativo del proyecto", "url": null }
+  }
+]

@@ -1,93 +1,234 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Recursos educativos de bienestar y organización para estudiantes.">
-  <link rel="icon" href="../assets/img/hoja.png" type="image/png">
-  <title>Recursos | Mente Universitaria</title>
-</head>
-<body>
-  <header>
-    <a href="../index.html" aria-label="Ir al inicio de Mente Universitaria">
-      <img src="../assets/img/hoja.png" alt="" width="48" height="48"><span>Mente Universitaria</span>
-    </a>
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="../index.html">Inicio</a></li><li><a href="encuesta.html">Encuesta</a></li>
-        <li><a href="recursos.html" aria-current="page">Recursos</a></li><li><a href="mi-pausa.html">Mi pausa</a></li>
-        <li><a href="mi-plan.html">Mi plan</a></li><li><a href="buscar-apoyo.html">Buscar apoyo</a></li>
-      </ul>
-    </nav>
-    <details>
-      <summary>Opciones de accesibilidad</summary>
-      <form>
-        <fieldset><legend>Contraste</legend><label><input type="radio" name="contraste" value="claro" checked> Claro</label><label><input type="radio" name="contraste" value="oscuro"> Oscuro</label><label><input type="radio" name="contraste" value="alto"> Alto contraste</label></fieldset>
-        <label for="tamano-texto-recursos">Tamaño del texto</label>
-        <select id="tamano-texto-recursos" name="tamano-texto"><option>85 %</option><option>90 %</option><option>95 %</option><option selected>100 %</option><option>125 %</option><option>150 %</option><option>200 %</option></select>
-      </form>
-    </details>
-  </header>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Recursos, pausas y planes de autocuidado para estudiantes universitarios.">
+    <meta name="theme-color" content="#1b6b5a">
+    <title>Recursos | Mente Universitaria</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/comun.css">
+    <link rel="stylesheet" href="../css/recursos.css">
+    <script defer src="../js/app.bundle.js"></script>
+  </head>
+  <body data-theme="light" data-page="recursos">
+    <a class="skip-link" href="#app-main">Saltar al contenido principal</a>
 
-  <main id="contenido-principal">
-    <nav aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li aria-current="page">Recursos</li></ol></nav>
-    <header>
-      <h1>Recursos para tu bienestar</h1>
-      <p>Ideas prácticas para organizarte, descansar y acompañar lo que sientes.</p>
-      <figure>
-        <img src="../assets/img/portada-recursos.png" alt="Elementos de estudio y bienestar organizados sobre una mesa" width="640" height="360">
-        <figcaption>Consulta los contenidos por tema y tiempo disponible.</figcaption>
-      </figure>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="brand" href="../index.html" aria-label="Mente Universitaria, ir al inicio">
+          <img class="brand__mark" src="../assets/icons/leaf.png" width="23" height="23" alt="">
+          <span class="brand__name">Mente<br>Universitaria</span>
+        </a>
+        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+          <span aria-hidden="true">☰</span><span class="visually-hidden">Abrir menú</span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Navegación principal" data-navigation>
+          <a href="../index.html">Inicio</a>
+          <a href="./encuesta.html">Encuesta</a>
+          <a href="./recursos.html" aria-current="page">Recursos</a>
+          <a href="./mi-pausa.html">Mi pausa</a>
+          <a href="./mi-plan.html">Mi plan</a>
+          <a href="./buscar-apoyo.html">Buscar apoyo</a>
+        </nav>
+        <div class="site-header__actions">
+          <button class="accessibility-button" type="button" data-open-accessibility aria-label="Abrir opciones de accesibilidad"><span aria-hidden="true">A</span></button>
+        </div>
+      </div>
     </header>
 
-    <form action="#lista-recursos" method="get" role="search">
-      <label for="buscar-recurso">Buscar por tema o situación</label>
-      <input id="buscar-recurso" name="busqueda" type="search" placeholder="Ejemplo: organizar entregas">
-      <label for="categoria-recurso">Categoría</label>
-      <select id="categoria-recurso" name="categoria">
-        <option value="todas">Todas</option><option value="organizacion">Organización</option><option value="descanso">Descanso</option><option value="pausas">Pausas</option><option value="apoyo">Apoyo</option>
-      </select>
-      <label for="duracion-recurso">Tiempo disponible</label>
-      <select id="duracion-recurso" name="duracion">
-        <option value="cualquiera">Cualquier duración</option><option value="5">Hasta 5 minutos</option><option value="10">Hasta 10 minutos</option><option value="15">Hasta 15 minutos</option>
-      </select>
-      <button type="submit">Buscar</button>
-    </form>
+    <main id="app-main" tabindex="-1">
+      <section id="page-recursos" class="page" data-page="recursos" aria-labelledby="resources-title">
+        <nav class="breadcrumbs" aria-label="Migas de pan">
+          <ol><li><a href="../index.html">Inicio</a></li><li aria-current="page">Recursos</li></ol>
+        </nav>
 
-    <article aria-labelledby="destacado-titulo">
-      <img src="../assets/img/recurso-destacado.png" alt="Persona revisando una lista de tareas" width="480" height="320">
-      <h2 id="destacado-titulo">Cómo empezar cuando tienes demasiados pendientes</h2>
-      <p>Ordena lo urgente, elige un primer paso y recupera sensación de avance.</p>
-      <ol><li>Escribe la entrega que más te preocupa.</li><li>Divídela en investigar, producir y revisar.</li><li>Elige una primera acción que puedas iniciar hoy.</li></ol>
-    </article>
+        <div class="hero hero--inner">
+          <div class="hero__content">
+            <p class="eyebrow">Herramientas para tu día a día</p>
+            <h1 id="resources-title">Recursos para tu bienestar</h1>
+            <p class="hero__description">Explora ideas prácticas para organizarte, descansar y acompañar lo que sientes durante tu vida universitaria.</p>
+          </div>
+          <img class="hero__image" fetchpriority="high" src="../assets/images/resource-hero.webp" width="672" height="300" alt="Estudiante leyendo en un espacio universitario tranquilo">
+        </div>
 
-    <section id="lista-recursos" aria-labelledby="lista-recursos-titulo">
-      <h2 id="lista-recursos-titulo">Todos los recursos</h2>
-      <article>
-        <img src="../assets/img/recurso-organizacion.png" alt="Agenda con una lista de actividades" width="360" height="240">
-        <h3>Divide tus entregas en pasos</h3><p>Convierte una tarea grande en tres acciones pequeñas.</p><p><strong>Categoría:</strong> Organización. <strong>Duración:</strong> 5 minutos.</p>
+        <section class="content-section resource-explorer" aria-labelledby="resource-search-title">
+          <h2 id="resource-search-title" class="visually-hidden">Buscar y filtrar recursos</h2>
+          <form class="resource-tools" data-resource-form role="search">
+            <div class="resource-search">
+              <label class="form-field form-field--grow">
+                <span class="visually-hidden">Buscar por tema o situación</span>
+                <input type="search" name="search" maxlength="80" placeholder="Buscar por tema o situación" data-resource-search>
+              </label>
+              <button class="button button--primary" type="submit">Buscar</button>
+            </div>
+            <div class="filter-row" role="group" aria-label="Filtros de recursos">
+              <label class="form-field">
+                <span>Categoría</span>
+                <select name="category" data-resource-category>
+                  <option value="">Todas</option>
+                  <option value="organizacion">Organización</option>
+                  <option value="pausas">Pausas</option>
+                  <option value="concentracion">Concentración</option>
+                  <option value="descanso">Descanso</option>
+                  <option value="apoyo">Apoyo</option>
+                </select>
+              </label>
+              <label class="form-field">
+                <span>Tiempo disponible</span>
+                <select name="maxDuration" data-resource-duration>
+                  <option value="">Cualquier duración</option>
+                  <option value="5">Hasta 5 minutos</option>
+                  <option value="10">Hasta 10 minutos</option>
+                  <option value="15">Hasta 15 minutos</option>
+                  <option value="20">Hasta 20 minutos</option>
+                </select>
+              </label>
+            </div>
+          </form>
+        </section>
+
+        <section class="content-section featured-resource" aria-labelledby="featured-resource-title">
+          <img src="../assets/images/resource-featured.webp" loading="lazy" width="520" height="266" alt="Estudiante organizando varias tareas con notas adhesivas">
+          <div class="featured-resource__body">
+            <span class="tag">Recurso recomendado</span>
+            <h2 id="featured-resource-title">Cómo empezar cuando tienes demasiados pendientes</h2>
+            <p>Un método amable para ordenar lo urgente, elegir un primer paso y recuperar sensación de avance.</p>
+            <button class="button button--primary" type="button" data-open-featured-resource>Leer recurso</button>
+          </div>
+        </section>
+
+        <section class="content-section pdf-resources" aria-labelledby="pdf-resources-title">
+          <div class="section-heading">
+            <p class="eyebrow">Para guardar, imprimir o completar</p>
+            <h2 id="pdf-resources-title">Guías descargables en PDF</h2>
+            <p>Tres herramientas breves con pasos claros y hojas de trabajo. Cada guía se puede leer en web o descargar en PDF.</p>
+          </div>
+          <div class="pdf-resource-grid">
+            <article class="card pdf-card">
+              <div class="pdf-card__meta"><span class="pdf-badge">PDF · 2 páginas</span><span aria-hidden="true">01</span></div>
+              <h3>Organiza tu semana sin llenarla de más</h3>
+              <p>Ordena pendientes, define prioridades y elige un primer paso de menos de diez minutos.</p>
+              <div class="pdf-card__actions">
+                <a class="button button--primary" href="../assets/guides/organizacion-semanal.html">Leer en web</a>
+                <a class="button button--secondary" href="../assets/pdfs/guia-organizacion-semanal.pdf" type="application/pdf" download>Descargar PDF <span aria-hidden="true">↓</span></a>
+              </div>
+            </article>
+            <article class="card pdf-card">
+              <div class="pdf-card__meta"><span class="pdf-badge">PDF · 2 páginas</span><span aria-hidden="true">02</span></div>
+              <h3>Una pausa breve para volver a ti</h3>
+              <p>Sigue una pausa guiada de tres minutos y registra qué necesitas antes de continuar.</p>
+              <div class="pdf-card__actions">
+                <a class="button button--primary" href="../assets/guides/pausa-respiracion.html">Leer en web</a>
+                <a class="button button--secondary" href="../assets/pdfs/guia-pausa-respiracion.pdf" type="application/pdf" download>Descargar PDF <span aria-hidden="true">↓</span></a>
+              </div>
+            </article>
+            <article class="card pdf-card">
+              <div class="pdf-card__meta"><span class="pdf-badge">PDF · 2 páginas</span><span aria-hidden="true">03</span></div>
+              <h3>Cuando la presión académica se acumula</h3>
+              <p>Separa lo que puedes hacer, el apoyo que necesitas y tu plan para las próximas 24 horas.</p>
+              <div class="pdf-card__actions">
+                <a class="button button--primary" href="../assets/guides/presion-academica.html">Leer en web</a>
+                <a class="button button--secondary" href="../assets/pdfs/guia-presion-academica.pdf" type="application/pdf" download>Descargar PDF <span aria-hidden="true">↓</span></a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" aria-labelledby="all-resources-title">
+          <h2 id="all-resources-title">Todos los recursos</h2>
+          <p>Elige una idea que se adapte a lo que necesitas hoy.</p>
+          <div class="status-panel" data-resource-loading role="status">Cargando recursos…</div>
+          <div class="status-panel status-panel--error" data-resource-error role="alert" hidden>
+            <p>No pudimos consultar el catálogo.</p>
+            <button class="button button--secondary" type="button" data-retry-resources>Intentar de nuevo</button>
+          </div>
+          <div class="status-panel" data-resource-empty hidden>
+            <h3>No encontramos resultados</h3>
+            <p>Prueba con otra palabra o elimina algún filtro.</p>
+            <button class="button button--secondary" type="button" data-clear-resource-filters>Limpiar filtros</button>
+          </div>
+          <div class="resource-grid" data-resource-list aria-live="polite"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <h2>Mente Universitaria</h2>
+        <p>Un espacio para cuidar tus hábitos durante la vida universitaria.</p>
+        <nav aria-label="Mapa del sitio">
+          <a href="../index.html">Inicio</a>
+          <a href="./encuesta.html">Encuesta</a>
+          <a href="./recursos.html">Recursos</a>
+          <a href="./mi-pausa.html">Mi pausa</a>
+          <a href="./mi-plan.html">Mi plan</a>
+          <a href="./buscar-apoyo.html">Buscar apoyo</a>
+        </nav>
+        <div class="site-footer__utilities">
+          <button type="button" data-open-accessibility>Accesibilidad</button>
+          <button type="button" data-open-data-information>Sobre tus datos</button>
+        </div>
+        <p class="site-footer__notice">Proyecto académico independiente. La orientación de bienestar no sustituye el acompañamiento profesional.</p>
+      </div>
+    </footer>
+
+
+
+    <dialog class="modal" data-accessibility-dialog aria-labelledby="accessibility-title">
+      <form method="dialog" class="modal__surface">
+        <div class="modal__header"><h2 id="accessibility-title">Accesibilidad</h2><button class="icon-button" type="submit" value="cancel" aria-label="Cerrar">×</button></div>
+        <fieldset>
+          <legend>Contraste</legend>
+          <div class="segmented-control" data-theme-options>
+            <button type="button" data-theme-value="light" aria-pressed="true">Claro</button>
+            <button type="button" data-theme-value="dark" aria-pressed="false">Oscuro</button>
+            <button type="button" data-theme-value="contrast" aria-pressed="false">Alto contraste</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Tamaño del texto</legend>
+          <div class="font-size-grid" data-font-options>
+            <button type="button" data-font-value="85">85 %</button>
+            <button type="button" data-font-value="90">90 %</button>
+            <button type="button" data-font-value="95">95 %</button>
+            <button type="button" data-font-value="100" aria-pressed="true">100 %</button>
+            <button type="button" data-font-value="125">125 %</button>
+            <button type="button" data-font-value="150">150 %</button>
+            <button type="button" data-font-value="200">200 %</button>
+          </div>
+        </fieldset>
+        <button class="button button--secondary button--wide" type="button" data-reset-accessibility>Restablecer preferencias</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" data-resource-dialog aria-labelledby="resource-dialog-title">
+      <article class="modal__surface resource-detail">
+        <div class="modal__header"><h2 id="resource-dialog-title" data-resource-detail-title>Recurso</h2><button class="icon-button" type="button" data-close-resource aria-label="Cerrar">×</button></div>
+        <p data-resource-detail-summary></p>
+        <ol data-resource-detail-steps></ol>
+        <p class="privacy-note" data-resource-detail-source></p>
+        <button class="button button--primary button--wide" type="button" data-save-resource>Guardar en Mi plan</button>
       </article>
-      <article>
-        <img src="../assets/img/recurso-presion.png" alt="Estudiante tomando una pausa antes de continuar" width="360" height="240">
-        <h3>Una pausa antes del parcial</h3><p>Respira, revisa tu prioridad y vuelve a una sola tarea.</p><p><strong>Categoría:</strong> Pausas. <strong>Duración:</strong> 5 minutos.</p>
-      </article>
-      <article>
-        <img src="../assets/img/recurso-descanso.png" alt="Persona descansando después de estudiar" width="360" height="240">
-        <h3>Organiza una semana posible</h3><p>Distribuye compromisos dejando espacio para descansar y trasladarte.</p><p><strong>Categoría:</strong> Organización. <strong>Duración:</strong> 10 minutos.</p>
-      </article>
-    </section>
+    </dialog>
 
-    <aside aria-labelledby="estados-api-titulo">
-      <h2 id="estados-api-titulo">Estados previstos al consumir la API</h2>
-      <ul><li>Cargando recursos.</li><li>No se encontraron resultados.</li><li>No fue posible consultar el catálogo.</li></ul>
-    </aside>
-  </main>
+    <dialog class="modal" data-data-dialog aria-labelledby="data-title">
+      <article class="modal__surface">
+        <div class="modal__header"><h2 id="data-title">Sobre tus datos</h2><button class="icon-button" type="button" data-close-data-information aria-label="Cerrar">×</button></div>
+        <p>La encuesta, las preferencias de accesibilidad y los planes se guardan con IndexedDB en este navegador.</p>
+        <p>No existe sincronización automática entre dispositivos. Si borras los datos del navegador, puedes perder la información que no hayas exportado.</p>
+        <p>La solicitud del generador se envía a la API propia y al servicio de IA solo cuando presionas “Generar propuesta”.</p>
+      </article>
+    </dialog>
 
-  <footer>
-    <nav aria-label="Mapa del sitio"><h2>Mapa del sitio</h2><ul>
-      <li><a href="../index.html">Inicio</a></li><li><a href="encuesta.html">Encuesta de bienestar</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="mi-pausa.html">Mi pausa</a></li><li><a href="mi-plan.html">Mi plan</a></li><li><a href="buscar-apoyo.html">Buscar apoyo</a></li>
-    </ul></nav>
-    <p>Proyecto académico de Programación Web I.</p><p><small>&copy; 2026 Mente Universitaria.</small></p>
-  </footer>
-</body>
+    <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
+
+    <noscript>
+      <p class="noscript-message">Esta aplicación necesita JavaScript para navegar entre secciones y usar sus herramientas.</p>
+    </noscript>
+
+    <noscript>
+      <p class="noscript-message">Esta página necesita JavaScript para usar sus formularios y herramientas interactivas.</p>
+    </noscript>
+  </body>
 </html>

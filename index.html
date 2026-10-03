@@ -1,135 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Plataforma académica de autocuidado y bienestar para estudiantes universitarios.">
-  <link rel="icon" href="assets/img/hoja.png" type="image/png">
-  <title>Inicio | Mente Universitaria</title>
-</head>
-<body>
-  <header>
-    <a href="index.html" aria-label="Ir al inicio de Mente Universitaria">
-      <img src="assets/img/hoja.png" alt="" width="48" height="48">
-      <span>Mente Universitaria</span>
-    </a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Recursos, pausas y planes de autocuidado para estudiantes universitarios.">
+    <meta name="theme-color" content="#1b6b5a">
+    <title>Inicio | Mente Universitaria</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./css/comun.css">
+    <link rel="stylesheet" href="./css/inicio.css">
+    <script defer src="./js/app.bundle.js"></script>
+  </head>
+  <body data-theme="light" data-page="inicio">
+    <a class="skip-link" href="#app-main">Saltar al contenido principal</a>
 
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="index.html" aria-current="page">Inicio</a></li>
-        <li><a href="pages/encuesta.html">Encuesta</a></li>
-        <li><a href="pages/recursos.html">Recursos</a></li>
-        <li><a href="pages/mi-pausa.html">Mi pausa</a></li>
-        <li><a href="pages/mi-plan.html">Mi plan</a></li>
-        <li><a href="pages/buscar-apoyo.html">Buscar apoyo</a></li>
-      </ul>
-    </nav>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="brand" href="./index.html" aria-label="Mente Universitaria, ir al inicio">
+          <img class="brand__mark" src="./assets/icons/leaf.png" width="23" height="23" alt="">
+          <span class="brand__name">Mente<br>Universitaria</span>
+        </a>
+        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+          <span aria-hidden="true">☰</span><span class="visually-hidden">Abrir menú</span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Navegación principal" data-navigation>
+          <a href="./index.html" aria-current="page">Inicio</a>
+          <a href="./pages/encuesta.html">Encuesta</a>
+          <a href="./pages/recursos.html">Recursos</a>
+          <a href="./pages/mi-pausa.html">Mi pausa</a>
+          <a href="./pages/mi-plan.html">Mi plan</a>
+          <a href="./pages/buscar-apoyo.html">Buscar apoyo</a>
+        </nav>
+        <div class="site-header__actions">
+          <button class="accessibility-button" type="button" data-open-accessibility aria-label="Abrir opciones de accesibilidad"><span aria-hidden="true">A</span></button>
+        </div>
+      </div>
+    </header>
 
-    <details>
-      <summary>Opciones de accesibilidad</summary>
-      <form>
+    <main id="app-main" tabindex="-1">
+      <section id="page-inicio" class="page" data-page="inicio" aria-labelledby="home-title">
+        <div class="hero hero--home">
+          <div class="hero__content">
+            <p class="eyebrow">Estudiar también es cuidarse</p>
+            <h1 id="home-title">Tu bienestar también hace parte de tu vida universitaria</h1>
+            <p class="hero__description">Reconoce cómo te sientes, encuentra recursos y da pequeños pasos para cuidarte.</p>
+            <div class="button-row">
+              <a class="button button--primary" href="./pages/encuesta.html">Responder encuesta <span aria-hidden="true">→</span></a>
+              <a class="button button--secondary" href="./pages/buscar-apoyo.html">Buscar apoyo <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <img
+            class="hero__image" fetchpriority="high"
+            src="./assets/images/hero-home.webp"
+            width="680"
+            height="412"
+            alt="Grupo diverso de estudiantes conversando y estudiando alrededor de una mesa"
+          >
+        </div>
+
+        <div class="content-section benefits-grid" role="group" aria-label="Formas de cuidar tu bienestar">
+          <article class="card feature-card">
+            <span class="feature-card__icon" aria-hidden="true">♡</span>
+            <h2>Entiende lo que sientes</h2>
+            <p>Reconoce hábitos y situaciones de tu vida universitaria.</p>
+          </article>
+          <article class="card feature-card">
+            <span class="feature-card__icon" aria-hidden="true">◇</span>
+            <h2>Encuentra un recurso</h2>
+            <p>Explora herramientas, guías y contenidos prácticos.</p>
+          </article>
+          <article class="card feature-card">
+            <span class="feature-card__icon" aria-hidden="true">◌</span>
+            <h2>Tómate una pausa</h2>
+            <p>Respira, desconéctate un momento y recupera energía.</p>
+          </article>
+        </div>
+
+        <section class="content-section tinted-section tinted-section--lavender" aria-labelledby="situations-title">
+          <p class="eyebrow">Situaciones reales, emociones reales</p>
+          <h2 id="situations-title">Lo que vives también importa</h2>
+          <p>La vida universitaria puede ser retadora. Aquí encontrarás apoyo para situaciones que hacen parte de tu día a día.</p>
+          <ul class="situation-list" role="list">
+            <li>▣ Parciales y entregas</li>
+            <li>▤ Trabajo y estudio</li>
+            <li>♧ Relaciones</li>
+            <li>⌁ Adaptación universitaria</li>
+          </ul>
+        </section>
+
+        <section class="content-section" aria-labelledby="featured-title">
+          <p class="eyebrow">Herramientas para tu día a día</p>
+          <h2 id="featured-title">Recursos destacados</h2>
+          <div class="resource-preview-grid">
+            <article class="card media-card">
+              <img src="./assets/images/resource-card-1.webp" loading="lazy" width="384" height="160" alt="Estudiante organizando tareas con notas de colores">
+              <div class="media-card__body">
+                <h3>Organiza tus pendientes</h3>
+                <p>Estrategias simples para priorizar y sentir más control.</p>
+                <span class="tag">Organización</span>
+              </div>
+            </article>
+            <article class="card media-card">
+              <img src="./assets/images/resource-card-2.webp" loading="lazy" width="384" height="160" alt="Estudiante concentrada en una pausa de respiración">
+              <div class="media-card__body">
+                <h3>Descansa sin culpa</h3>
+                <p>Ideas para recuperar energía y mejorar tu bienestar.</p>
+                <span class="tag">Autocuidado</span>
+              </div>
+            </article>
+            <article class="card media-card">
+              <img src="./assets/images/resource-card-3.webp" loading="lazy" width="384" height="160" alt="Estudiante trabajando en una mesa ordenada">
+              <div class="media-card__body">
+                <h3>Maneja la presión académica</h3>
+                <p>Recomendaciones para afrontar momentos exigentes.</p>
+                <span class="tag">Bienestar académico</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section action-stack" aria-label="Acciones recomendadas">
+          <article class="action-banner action-banner--mint">
+            <div><h2>¿Qué hábitos quieres cuidar?</h2><p>Responde algunas preguntas y recibe un resumen descriptivo.</p></div>
+            <a class="button button--primary" href="./pages/encuesta.html">Comenzar encuesta <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="action-banner action-banner--lavender">
+            <div><h2>Haz una pausa, tu mente también lo agradece</h2><p>Explora ejercicios breves de respiración y atención.</p></div>
+            <a class="button button--accent" href="./pages/mi-pausa.html">Ir a Mi pausa <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="action-banner action-banner--rose">
+            <div><h2>Buscar apoyo también es parte del camino</h2><p>Aquí encontrarás opciones y canales oficiales.</p></div>
+            <a class="button button--primary" href="./pages/buscar-apoyo.html">Buscar apoyo <span aria-hidden="true">→</span></a>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <h2>Mente Universitaria</h2>
+        <p>Un espacio para cuidar tus hábitos durante la vida universitaria.</p>
+        <nav aria-label="Mapa del sitio">
+          <a href="./index.html">Inicio</a>
+          <a href="./pages/encuesta.html">Encuesta</a>
+          <a href="./pages/recursos.html">Recursos</a>
+          <a href="./pages/mi-pausa.html">Mi pausa</a>
+          <a href="./pages/mi-plan.html">Mi plan</a>
+          <a href="./pages/buscar-apoyo.html">Buscar apoyo</a>
+        </nav>
+        <div class="site-footer__utilities">
+          <button type="button" data-open-accessibility>Accesibilidad</button>
+          <button type="button" data-open-data-information>Sobre tus datos</button>
+        </div>
+        <p class="site-footer__notice">Proyecto académico independiente. La orientación de bienestar no sustituye el acompañamiento profesional.</p>
+      </div>
+    </footer>
+
+
+
+    <dialog class="modal" data-accessibility-dialog aria-labelledby="accessibility-title">
+      <form method="dialog" class="modal__surface">
+        <div class="modal__header"><h2 id="accessibility-title">Accesibilidad</h2><button class="icon-button" type="submit" value="cancel" aria-label="Cerrar">×</button></div>
         <fieldset>
           <legend>Contraste</legend>
-          <label><input type="radio" name="contraste" value="claro" checked> Claro</label>
-          <label><input type="radio" name="contraste" value="oscuro"> Oscuro</label>
-          <label><input type="radio" name="contraste" value="alto"> Alto contraste</label>
+          <div class="segmented-control" data-theme-options>
+            <button type="button" data-theme-value="light" aria-pressed="true">Claro</button>
+            <button type="button" data-theme-value="dark" aria-pressed="false">Oscuro</button>
+            <button type="button" data-theme-value="contrast" aria-pressed="false">Alto contraste</button>
+          </div>
         </fieldset>
-        <label for="tamano-texto-inicio">Tamaño del texto</label>
-        <select id="tamano-texto-inicio" name="tamano-texto">
-          <option value="85">85 %</option>
-          <option value="90">90 %</option>
-          <option value="95">95 %</option>
-          <option value="100" selected>100 %</option>
-          <option value="125">125 %</option>
-          <option value="150">150 %</option>
-          <option value="200">200 %</option>
-        </select>
+        <fieldset>
+          <legend>Tamaño del texto</legend>
+          <div class="font-size-grid" data-font-options>
+            <button type="button" data-font-value="85">85 %</button>
+            <button type="button" data-font-value="90">90 %</button>
+            <button type="button" data-font-value="95">95 %</button>
+            <button type="button" data-font-value="100" aria-pressed="true">100 %</button>
+            <button type="button" data-font-value="125">125 %</button>
+            <button type="button" data-font-value="150">150 %</button>
+            <button type="button" data-font-value="200">200 %</button>
+          </div>
+        </fieldset>
+        <button class="button button--secondary button--wide" type="button" data-reset-accessibility>Restablecer preferencias</button>
       </form>
-    </details>
-  </header>
+    </dialog>
 
-  <main id="contenido-principal">
-    <section aria-labelledby="titulo-principal">
-      <div>
-        <p>Estudiar también es cuidarse</p>
-        <h1 id="titulo-principal">Tu bienestar también hace parte de tu vida universitaria</h1>
-        <p>Encuentra recursos educativos, actividades breves y herramientas para organizar acciones de autocuidado.</p>
-        <p>
-          <a href="pages/encuesta.html">Responder la encuesta</a>
-          <a href="pages/recursos.html">Explorar recursos</a>
-        </p>
-      </div>
-
-      <figure>
-        <img src="assets/img/inicio-estudiantes.png" alt="Estudiantes conversando y compartiendo en un espacio universitario" width="640" height="420">
-        <figcaption>Un espacio académico para reconocer hábitos y encontrar opciones de apoyo.</figcaption>
-      </figure>
-    </section>
-
-    <section aria-labelledby="servicios-titulo">
-      <h2 id="servicios-titulo">¿Qué encontrarás?</h2>
-
-      <article>
-        <h3>Reconoce tus hábitos</h3>
-        <p>Reflexiona sobre descanso, pausas, organización, concentración y redes de apoyo.</p>
-        <a href="pages/encuesta.html">Ir a la encuesta</a>
+    <dialog class="modal" data-data-dialog aria-labelledby="data-title">
+      <article class="modal__surface">
+        <div class="modal__header"><h2 id="data-title">Sobre tus datos</h2><button class="icon-button" type="button" data-close-data-information aria-label="Cerrar">×</button></div>
+        <p>La encuesta, las preferencias de accesibilidad y los planes se guardan con IndexedDB en este navegador.</p>
+        <p>No existe sincronización automática entre dispositivos. Si borras los datos del navegador, puedes perder la información que no hayas exportado.</p>
+        <p>La solicitud del generador se envía a la API propia y al servicio de IA solo cuando presionas “Generar propuesta”.</p>
       </article>
+    </dialog>
 
-      <article>
-        <h3>Encuentra recursos</h3>
-        <p>Consulta contenidos educativos para situaciones universitarias cotidianas.</p>
-        <a href="pages/recursos.html">Ver recursos</a>
-      </article>
+    <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
 
-      <article>
-        <h3>Tómate una pausa</h3>
-        <p>Prueba ejercicios breves para respirar, escribir y recuperar el foco.</p>
-        <a href="pages/mi-pausa.html">Comenzar una pausa</a>
-      </article>
-    </section>
+    <noscript>
+      <p class="noscript-message">Esta aplicación necesita JavaScript para navegar entre secciones y usar sus herramientas.</p>
+    </noscript>
 
-    <section aria-labelledby="destacados-titulo">
-      <h2 id="destacados-titulo">Recursos destacados</h2>
-
-      <article>
-        <img src="assets/img/recurso-organizacion.png" alt="Agenda con actividades organizadas" width="360" height="240">
-        <h3>Organiza tus pendientes</h3>
-        <p>Estrategias simples para priorizar y recuperar sensación de avance.</p>
-      </article>
-
-      <article>
-        <img src="assets/img/recurso-descanso.png" alt="Persona descansando en un ambiente tranquilo" width="360" height="240">
-        <h3>Descansa sin culpa</h3>
-        <p>Ideas para recuperar energía y cuidar el ritmo de estudio.</p>
-      </article>
-
-      <article>
-        <img src="assets/img/recurso-presion.png" alt="Estudiante organizando tareas académicas" width="360" height="240">
-        <h3>Maneja la presión académica</h3>
-        <p>Recomendaciones educativas para afrontar semanas exigentes.</p>
-      </article>
-    </section>
-
-    <aside aria-labelledby="alcance-titulo">
-      <h2 id="alcance-titulo">Alcance del proyecto</h2>
-      <p>Mente Universitaria es una propuesta académica. No realiza diagnósticos, no reemplaza la atención profesional y no es un servicio oficial de UNIMINUTO.</p>
-    </aside>
-  </main>
-
-  <footer>
-    <nav aria-label="Mapa del sitio">
-      <h2>Mapa del sitio</h2>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="pages/encuesta.html">Encuesta de bienestar</a></li>
-        <li><a href="pages/recursos.html">Recursos</a></li>
-        <li><a href="pages/mi-pausa.html">Mi pausa</a></li>
-        <li><a href="pages/mi-plan.html">Mi plan</a></li>
-        <li><a href="pages/buscar-apoyo.html">Buscar apoyo</a></li>
-      </ul>
-    </nav>
-    <p>Proyecto académico de Programación Web I.</p>
-    <p><small>&copy; 2026 Mente Universitaria.</small></p>
-  </footer>
-</body>
+    <noscript>
+      <p class="noscript-message">Esta página necesita JavaScript para usar sus formularios y herramientas interactivas.</p>
+    </noscript>
+  </body>
 </html>

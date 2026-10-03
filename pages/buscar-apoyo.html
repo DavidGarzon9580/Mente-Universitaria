@@ -1,60 +1,169 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Canales informativos y oficiales de orientación para estudiantes.">
-  <link rel="icon" href="../assets/img/hoja.png" type="image/png">
-  <title>Buscar apoyo | Mente Universitaria</title>
-</head>
-<body>
-  <header>
-    <a href="../index.html" aria-label="Ir al inicio de Mente Universitaria"><img src="../assets/img/hoja.png" alt="" width="48" height="48"><span>Mente Universitaria</span></a>
-    <nav aria-label="Navegación principal"><ul><li><a href="../index.html">Inicio</a></li><li><a href="encuesta.html">Encuesta</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="mi-pausa.html">Mi pausa</a></li><li><a href="mi-plan.html">Mi plan</a></li><li><a href="buscar-apoyo.html" aria-current="page">Buscar apoyo</a></li></ul></nav>
-    <details>
-      <summary>Opciones de accesibilidad</summary>
-      <form>
-        <fieldset><legend>Contraste</legend><label><input type="radio" name="contraste" value="claro" checked> Claro</label><label><input type="radio" name="contraste" value="oscuro"> Oscuro</label><label><input type="radio" name="contraste" value="alto"> Alto contraste</label></fieldset>
-        <label for="tamano-texto-apoyo">Tamaño del texto</label><select id="tamano-texto-apoyo" name="tamano-texto"><option>85 %</option><option>90 %</option><option>95 %</option><option selected>100 %</option><option>125 %</option><option>150 %</option><option>200 %</option></select>
-      </form>
-    </details>
-  </header>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Recursos, pausas y planes de autocuidado para estudiantes universitarios.">
+    <meta name="theme-color" content="#1b6b5a">
+    <title>Buscar apoyo | Mente Universitaria</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/comun.css">
+    <link rel="stylesheet" href="../css/buscar-apoyo.css">
+    <script defer src="../js/app.bundle.js"></script>
+  </head>
+  <body data-theme="light" data-page="buscar-apoyo">
+    <a class="skip-link" href="#app-main">Saltar al contenido principal</a>
 
-  <main id="contenido-principal">
-    <nav aria-label="Migas de pan"><ol><li><a href="../index.html">Inicio</a></li><li aria-current="page">Buscar apoyo</li></ol></nav>
-    <header>
-      <h1>Buscar apoyo</h1><p>Pedir orientación también es una forma de cuidarte.</p>
-      <figure><img src="../assets/img/buscar-apoyo.png" alt="Dos personas conversando en un espacio de orientación" width="640" height="420"><figcaption>Consulta el canal que se ajuste a tu situación y verifica sus condiciones oficiales.</figcaption></figure>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner">
+        <a class="brand" href="../index.html" aria-label="Mente Universitaria, ir al inicio">
+          <img class="brand__mark" src="../assets/icons/leaf.png" width="23" height="23" alt="">
+          <span class="brand__name">Mente<br>Universitaria</span>
+        </a>
+        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+          <span aria-hidden="true">☰</span><span class="visually-hidden">Abrir menú</span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Navegación principal" data-navigation>
+          <a href="../index.html">Inicio</a>
+          <a href="./encuesta.html">Encuesta</a>
+          <a href="./recursos.html">Recursos</a>
+          <a href="./mi-pausa.html">Mi pausa</a>
+          <a href="./mi-plan.html">Mi plan</a>
+          <a href="./buscar-apoyo.html" aria-current="page">Buscar apoyo</a>
+        </nav>
+        <div class="site-header__actions">
+          <button class="accessibility-button" type="button" data-open-accessibility aria-label="Abrir opciones de accesibilidad"><span aria-hidden="true">A</span></button>
+        </div>
+      </div>
     </header>
 
-    <section aria-labelledby="tipo-apoyo-titulo">
-      <h2 id="tipo-apoyo-titulo">¿Qué tipo de apoyo buscas?</h2>
-      <ul><li>Bienestar emocional.</li><li>Orientación académica.</li><li>Apoyo económico y social.</li><li>Atención ante una situación urgente.</li></ul>
-    </section>
+    <main id="app-main" tabindex="-1">
+      <section id="page-buscar-apoyo" class="page" data-page="buscar-apoyo" aria-labelledby="support-title">
+        <nav class="breadcrumbs" aria-label="Migas de pan">
+          <ol><li><a href="../index.html">Inicio</a></li><li aria-current="page">Buscar apoyo</li></ol>
+        </nav>
 
-    <section aria-labelledby="canales-titulo">
-      <h2 id="canales-titulo">Canales de orientación</h2><p>Verifica cobertura, horarios y condiciones en el sitio oficial.</p>
-      <article><h3>Bienestar de tu sede UNIMINUTO</h3><p>Consulta los servicios y medios disponibles para tu sede.</p><a href="https://www.uniminuto.edu/" rel="external">Consultar el sitio institucional</a></article>
-      <article><h3>Línea 106 en Bogotá</h3><p>Canal distrital de escucha y orientación en salud mental para Bogotá.</p><a href="https://www.saludcapital.gov.co/" rel="external">Ver información oficial</a></article>
-      <article><h3>Línea de emergencias 123</h3><p>Canal para solicitar atención ante una emergencia inmediata en Bogotá.</p><a href="https://bogota.gov.co/mi-ciudad/seguridad/linea-123" rel="external">Consultar información de la Línea 123</a></article>
-    </section>
+        <div class="hero hero--inner">
+          <div class="hero__content">
+            <p class="eyebrow">No tienes que hacerlo a solas</p>
+            <h1 id="support-title">Buscar apoyo</h1>
+            <p class="hero__description">Pedir ayuda también es una forma de cuidarte.</p>
+            <blockquote>“Hablar puede ser el primer paso para sentirte acompañado.”</blockquote>
+          </div>
+          <img class="hero__image" fetchpriority="high" src="../assets/images/support.webp" width="650" height="298" alt="Estudiante conversando con una orientadora en un espacio tranquilo">
+        </div>
 
-    <aside aria-labelledby="urgencia-titulo">
-      <h2 id="urgencia-titulo">Si existe peligro inmediato</h2>
-      <p>Comunícate con la línea de emergencias de tu localidad o busca apoyo presencial de una persona de confianza. Esta plataforma no atiende emergencias.</p>
-    </aside>
+        <section class="content-section" aria-labelledby="support-types-title">
+          <h2 id="support-types-title">¿Qué tipo de apoyo buscas?</h2>
+          <div class="support-type-grid">
+            <article class="card"><span aria-hidden="true">♡</span><h3>Bienestar emocional</h3><p>Hablar sobre cómo te sientes.</p></article>
+            <article class="card"><span aria-hidden="true">⌁</span><h3>Orientación académica</h3><p>Encontrar opciones para continuar.</p></article>
+            <article class="card"><span aria-hidden="true">♧</span><h3>Apoyo económico y social</h3><p>Conocer alternativas disponibles.</p></article>
+            <article class="card card--urgent"><span aria-hidden="true">!</span><h3>Necesito ayuda urgente</h3><p>Ver canales de atención inmediata.</p></article>
+          </div>
+        </section>
 
-    <section aria-labelledby="preguntas-titulo">
-      <h2 id="preguntas-titulo">Preguntas frecuentes</h2>
-      <details><summary>¿El proyecto agenda citas?</summary><p>No. Solamente organiza y muestra enlaces a servicios externos.</p></details>
-      <details><summary>¿Cuánto tarda el primer contacto?</summary><p>Los tiempos dependen del canal elegido. La plataforma no promete una respuesta.</p></details>
-      <details><summary>¿Mente Universitaria reemplaza la atención profesional?</summary><p>No. Es una propuesta académica e informativa.</p></details>
-    </section>
-  </main>
+        <section class="content-section tinted-section tinted-section--lavender" aria-labelledby="support-channels-title">
+          <h2 id="support-channels-title">Encuentra un canal</h2>
+          <p>Estos enlaces abren servicios externos. Verifica su cobertura, horarios y condiciones.</p>
+          <div class="support-channel-grid" data-support-channels aria-live="polite">
+            <p role="status">Consultando canales oficiales…</p>
+          </div>
+        </section>
 
-  <footer>
-    <nav aria-label="Mapa del sitio"><h2>Mapa del sitio</h2><ul><li><a href="../index.html">Inicio</a></li><li><a href="encuesta.html">Encuesta de bienestar</a></li><li><a href="recursos.html">Recursos</a></li><li><a href="mi-pausa.html">Mi pausa</a></li><li><a href="mi-plan.html">Mi plan</a></li><li><a href="buscar-apoyo.html">Buscar apoyo</a></li></ul></nav>
-    <p>Proyecto académico de Programación Web I.</p><p><small>&copy; 2026 Mente Universitaria.</small></p>
-  </footer>
-</body>
+        <section class="urgent-banner" aria-labelledby="urgent-title">
+          <div><h2 id="urgent-title">Si estás en peligro inmediato o sientes que podrías hacerte daño</h2><p>Busca ayuda inmediata. No tienes que atravesar este momento a solas.</p></div>
+          <div class="button-row"><a class="button button--danger" href="tel:123">Llamar al 123</a><a class="button button--danger" href="tel:106">Línea 106 Bogotá</a></div>
+        </section>
+
+        <section class="content-section tinted-section tinted-section--mint" aria-labelledby="support-process-title">
+          <h2 id="support-process-title">Cómo consultar un canal</h2>
+          <ol class="process-grid">
+            <li class="card"><strong>1</strong><h3>Primer contacto</h3><p>Abre el sitio oficial y localiza Bienestar en tu sede.</p></li>
+            <li class="card"><strong>2</strong><h3>Orientación inicial</h3><p>Verifica horarios, cobertura y condiciones.</p></li>
+            <li class="card"><strong>3</strong><h3>Siguiente paso</h3><p>Contacta el servicio por su canal publicado.</p></li>
+            <li class="card"><strong>♡</strong><h3>Tu privacidad importa</h3><p>Revisa la política de datos del servicio externo.</p></li>
+          </ol>
+        </section>
+
+        <section class="content-section" aria-labelledby="faq-title">
+          <h2 id="faq-title">Preguntas frecuentes</h2>
+          <div class="faq-list">
+            <details><summary>¿Tiene algún costo?</summary><p>Mente Universitaria es un proyecto académico. Consulta con cada servicio sus condiciones y posibles costos.</p></details>
+            <details><summary>¿Cuánto tarda el primer contacto?</summary><p>Los tiempos dependen del canal. Este sitio no asigna citas ni promete una respuesta.</p></details>
+            <details><summary>¿Puedo pedir orientación para otra persona?</summary><p>Puedes compartir los canales, pero la solicitud se realiza directamente con el servicio elegido.</p></details>
+            <details><summary>¿Qué pasa con la información que comparto?</summary><p>Este sitio no envía solicitudes de atención. Revisa la política de privacidad antes de compartir datos con un servicio externo.</p></details>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <h2>Mente Universitaria</h2>
+        <p>Un espacio para cuidar tus hábitos durante la vida universitaria.</p>
+        <nav aria-label="Mapa del sitio">
+          <a href="../index.html">Inicio</a>
+          <a href="./encuesta.html">Encuesta</a>
+          <a href="./recursos.html">Recursos</a>
+          <a href="./mi-pausa.html">Mi pausa</a>
+          <a href="./mi-plan.html">Mi plan</a>
+          <a href="./buscar-apoyo.html">Buscar apoyo</a>
+        </nav>
+        <div class="site-footer__utilities">
+          <button type="button" data-open-accessibility>Accesibilidad</button>
+          <button type="button" data-open-data-information>Sobre tus datos</button>
+        </div>
+        <p class="site-footer__notice">Proyecto académico independiente. La orientación de bienestar no sustituye el acompañamiento profesional.</p>
+      </div>
+    </footer>
+
+
+
+    <dialog class="modal" data-accessibility-dialog aria-labelledby="accessibility-title">
+      <form method="dialog" class="modal__surface">
+        <div class="modal__header"><h2 id="accessibility-title">Accesibilidad</h2><button class="icon-button" type="submit" value="cancel" aria-label="Cerrar">×</button></div>
+        <fieldset>
+          <legend>Contraste</legend>
+          <div class="segmented-control" data-theme-options>
+            <button type="button" data-theme-value="light" aria-pressed="true">Claro</button>
+            <button type="button" data-theme-value="dark" aria-pressed="false">Oscuro</button>
+            <button type="button" data-theme-value="contrast" aria-pressed="false">Alto contraste</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Tamaño del texto</legend>
+          <div class="font-size-grid" data-font-options>
+            <button type="button" data-font-value="85">85 %</button>
+            <button type="button" data-font-value="90">90 %</button>
+            <button type="button" data-font-value="95">95 %</button>
+            <button type="button" data-font-value="100" aria-pressed="true">100 %</button>
+            <button type="button" data-font-value="125">125 %</button>
+            <button type="button" data-font-value="150">150 %</button>
+            <button type="button" data-font-value="200">200 %</button>
+          </div>
+        </fieldset>
+        <button class="button button--secondary button--wide" type="button" data-reset-accessibility>Restablecer preferencias</button>
+      </form>
+    </dialog>
+
+    <dialog class="modal" data-data-dialog aria-labelledby="data-title">
+      <article class="modal__surface">
+        <div class="modal__header"><h2 id="data-title">Sobre tus datos</h2><button class="icon-button" type="button" data-close-data-information aria-label="Cerrar">×</button></div>
+        <p>La encuesta, las preferencias de accesibilidad y los planes se guardan con IndexedDB en este navegador.</p>
+        <p>No existe sincronización automática entre dispositivos. Si borras los datos del navegador, puedes perder la información que no hayas exportado.</p>
+        <p>La solicitud del generador se envía a la API propia y al servicio de IA solo cuando presionas “Generar propuesta”.</p>
+      </article>
+    </dialog>
+
+    <div class="toast-region" aria-live="polite" aria-atomic="true" data-toast-region></div>
+
+    <noscript>
+      <p class="noscript-message">Esta aplicación necesita JavaScript para navegar entre secciones y usar sus herramientas.</p>
+    </noscript>
+
+    <noscript>
+      <p class="noscript-message">Esta página necesita JavaScript para usar sus formularios y herramientas interactivas.</p>
+    </noscript>
+  </body>
 </html>

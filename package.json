@@ -1,0 +1,27 @@
+{
+  "name": "mente-universitaria",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Sitio multipágina accesible de bienestar estudiantil con CSS nativo, Express e IA agéntica.",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "predev": "npm run build:js",
+    "dev": "node --watch server/index.js",
+    "start": "node server/index.js",
+    "build:js": "node scripts/build-js.mjs",
+    "build": "npm run build:js",
+    "check": "node scripts/check-css.mjs && node scripts/build-js.mjs --check && node scripts/check-syntax.mjs && node scripts/check-contrast.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "compression": "^1.8.2",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

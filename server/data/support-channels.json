@@ -1,0 +1,28 @@
+[
+  {
+    "id": "uniminuto-bienestar",
+    "name": "Bienestar de tu sede UNIMINUTO",
+    "description": "Consulta en el sitio institucional los servicios y canales disponibles para tu sede.",
+    "actionLabel": "Consultar sitio de UNIMINUTO",
+    "url": "https://www.uniminuto.edu/",
+    "kind": "institutional"
+  },
+  {
+    "id": "linea-106",
+    "name": "Línea 106 en Bogotá",
+    "description": "Canal distrital de escucha y orientación en salud mental para personas que se encuentran en Bogotá.",
+    "actionLabel": "Llamar al 106",
+    "url": "tel:106",
+    "sourceUrl": "https://www.saludcapital.gov.co/",
+    "kind": "orientation"
+  },
+  {
+    "id": "emergencias-123",
+    "name": "Línea de emergencias 123",
+    "description": "Úsala ante una emergencia inmediata en Bogotá. La disponibilidad depende de tu ubicación.",
+    "actionLabel": "Llamar al 123",
+    "url": "tel:123",
+    "sourceUrl": "https://bogota.gov.co/",
+    "kind": "emergency"
+  }
+]
