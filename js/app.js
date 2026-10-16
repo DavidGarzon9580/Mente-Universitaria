@@ -29,6 +29,8 @@ function setupNavigationMenu() {
     if (event.target.closest('a')) close();
   });
   document.addEventListener('keydown', (event) => {
+    // Si hay un diálogo abierto (p. ej. accesibilidad desde el menú), Escape solo cierra el diálogo.
+    if (document.querySelector('dialog[open]')) return;
     if (event.key === 'Escape' && navigation.classList.contains('is-open')) {
       const restoreFocus = navigation.contains(document.activeElement);
       close();
