@@ -1,3 +1,7 @@
 node_modules/
 .env
 *.log
+
+# Salida de compilación para Vercel
+public/
+.vercel/

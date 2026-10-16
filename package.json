@@ -6,7 +6,7 @@
   "description": "Sitio multipágina accesible de bienestar estudiantil con CSS nativo, Express e IA agéntica.",
   "main": "server/index.js",
   "engines": {
-    "node": ">=20.11"
+    "node": "22.x"
   },
   "scripts": {
     "predev": "npm run build:js",
@@ -14,6 +14,7 @@
     "start": "node server/index.js",
     "build:js": "node scripts/build-js.mjs",
     "build": "npm run build:js",
+    "build:vercel": "npm run build:js && node scripts/build-public.mjs",
     "check": "node scripts/check-css.mjs && node scripts/build-js.mjs --check && node scripts/check-syntax.mjs && node scripts/check-contrast.mjs",
     "test": "node --test"
   },

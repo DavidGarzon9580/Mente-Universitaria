@@ -1,373 +1,296 @@
-🧠 Mente Universitaria
-Plataforma web de autocuidado, organización y bienestar estudiantil
-Mente Universitaria es una plataforma web orientada a estudiantes universitarios, diseñada para facilitar el autocuidado cotidiano, la organización personal y el acceso a recursos relacionados con el bienestar.
+# 🧠 Mente Universitaria
 
-El proyecto está desarrollado como una iniciativa académica independiente dirigida principalmente a estudiantes de la Corporación Universitaria Minuto de Dios (UNIMINUTO).
+**Plataforma web de autocuidado, organización y bienestar estudiantil.**
 
-⚠️ Importante: Mente Universitaria no es una plataforma oficial de UNIMINUTO y no sustituye la atención profesional en salud mental.
+Mente Universitaria es una plataforma web para estudiantes universitarios que facilita el autocuidado cotidiano, la organización personal y el acceso a recursos de bienestar. Es una iniciativa académica independiente dirigida principalmente a estudiantes de la Corporación Universitaria Minuto de Dios (UNIMINUTO).
 
-📌 Índice
-Descripción del proyecto
-Alcance
-Deslinde de responsabilidad
-Planteamiento del problema
-Justificación
-Objetivos
-Alineación con los ODS
-Funcionalidades
-Integración de Inteligencia Artificial
-Accesibilidad
-Tecnologías utilizadas
-Arquitectura y almacenamiento
-Estructura del proyecto
-Diseño UI/UX
-Repositorio
-Referencias bibliográficas
-🎯 Descripción del proyecto
-Los estudiantes universitarios pueden enfrentarse diariamente a diferentes factores que afectan su bienestar, como la carga académica, responsabilidades laborales, compromisos personales, dificultades de organización y períodos prolongados de estrés.
+> [!IMPORTANT]
+> Mente Universitaria **no es una plataforma oficial de UNIMINUTO** y **no sustituye la atención profesional en salud mental**.
 
-Mente Universitaria busca proporcionar un espacio digital accesible donde el estudiante pueda encontrar recursos educativos, realizar actividades breves de autocuidado, evaluar de manera orientativa su estado de bienestar y construir un plan personal de hábitos.
+## 📌 Índice
 
-La plataforma adopta un enfoque preventivo y educativo, sin realizar diagnósticos médicos o psicológicos.
+- [Descripción](#-descripción)
+- [Deslinde de responsabilidad](#️-deslinde-de-responsabilidad)
+- [Planteamiento del problema](#-planteamiento-del-problema)
+- [Objetivos](#-objetivos)
+- [Alineación con los ODS](#-alineación-con-los-ods)
+- [Funcionalidades](#️-funcionalidades)
+- [Inteligencia Artificial en Mi plan](#-inteligencia-artificial-en-mi-plan)
+- [Accesibilidad](#-accesibilidad)
+- [Tecnologías](#️-tecnologías)
+- [Arquitectura](#️-arquitectura)
+- [Estructura del proyecto](#-estructura-del-proyecto)
+- [Cómo ejecutarlo en tu computador](#-cómo-ejecutarlo-en-tu-computador)
+- [Despliegue en Vercel](#-despliegue-en-vercel)
+- [API](#-api)
+- [Pruebas y verificaciones](#-pruebas-y-verificaciones)
+- [Referencias](#-referencias)
 
-🎯 Alcance
-El proyecto está dirigido principalmente a estudiantes de la Corporación Universitaria Minuto de Dios (UNIMINUTO) y se desarrolla dentro de un contexto académico independiente.
+## 🎯 Descripción
 
-La plataforma contempla herramientas para:
+Los estudiantes universitarios enfrentan a diario factores que afectan su bienestar: carga académica, responsabilidades laborales, compromisos personales, dificultades de organización y periodos prolongados de estrés.
 
-Consultar recursos educativos relacionados con bienestar y autocuidado.
-Realizar pausas activas y ejercicios breves.
-Completar una encuesta de bienestar de carácter orientativo.
-Crear un plan personal de actividades.
-Generar propuestas personalizadas mediante Inteligencia Artificial.
-Consultar información sobre canales de apoyo y orientación.
-⚠️ Deslinde de responsabilidad
+Mente Universitaria ofrece un espacio digital accesible donde el estudiante puede consultar recursos educativos, hacer pausas breves de autocuidado, evaluar de forma orientativa su bienestar y construir un plan personal de hábitos, con ayuda opcional de Inteligencia Artificial.
+
+La plataforma tiene un enfoque **preventivo y educativo**: no realiza diagnósticos médicos ni psicológicos.
+
+## ⚠️ Deslinde de responsabilidad
+
 Mente Universitaria:
 
-No constituye una plataforma oficial ni un canal institucional formal de UNIMINUTO.
-No diagnostica condiciones de salud mental.
-No emite conceptos clínicos.
-No reemplaza la atención, orientación, acompañamiento o terapia de profesionales de la salud.
-La información proporcionada tiene fines educativos, preventivos y de autocuidado.
-En situaciones que requieran atención profesional o de emergencia, se recomienda acudir a los canales institucionales o servicios de emergencia correspondientes.
-❓ Planteamiento del problema
-Los estudiantes universitarios enfrentan de forma recurrente cargas académicas, laborales y personales que pueden influir en su bienestar emocional y en su capacidad de organización.
+- No es una plataforma oficial ni un canal institucional de UNIMINUTO.
+- No diagnostica condiciones de salud mental ni emite conceptos clínicos.
+- No reemplaza la atención, el acompañamiento o la terapia de profesionales de la salud.
+- Ofrece información con fines educativos, preventivos y de autocuidado.
 
-Aunque existen recomendaciones, recursos educativos y servicios de apoyo, los estudiantes pueden tener dificultades para encontrar en un mismo espacio una herramienta digital que les permita:
+En situaciones que requieran atención profesional o de emergencia, acude a los canales institucionales o a los servicios de emergencia de tu ciudad.
 
-Organizar actividades personales de autocuidado.
-Incorporar pausas activas durante su jornada.
-Consultar información relacionada con bienestar.
-Realizar un seguimiento personal de sus hábitos.
-Construir una rutina adaptada a su disponibilidad.
-Pregunta central
-¿Cómo diseñar e implementar una plataforma web accesible que facilite a los estudiantes de UNIMINUTO la consulta de recursos de bienestar, la realización de actividades de autocuidado y la organización de un plan personal?
+## ❓ Planteamiento del problema
 
-💡 Justificación
-El desarrollo de Mente Universitaria busca ofrecer una alternativa digital práctica, preventiva e intuitiva que facilite la incorporación de hábitos de autocuidado y organización personal dentro de la rutina académica.
+Aunque existen recomendaciones, recursos y servicios de apoyo, a los estudiantes les cuesta encontrar en un solo lugar una herramienta que les permita organizar actividades de autocuidado, incorporar pausas en su jornada, consultar información de bienestar, hacer seguimiento a sus hábitos y construir una rutina adaptada a su disponibilidad.
 
-Desde una perspectiva técnica y pedagógica, el proyecto permite aplicar conceptos fundamentales del desarrollo web moderno, entre ellos:
+**Pregunta central:** ¿cómo diseñar e implementar una plataforma web accesible que facilite a los estudiantes de UNIMINUTO la consulta de recursos de bienestar, la realización de actividades de autocuidado y la organización de un plan personal?
 
-HTML5 semántico: organización estructurada, lógica y accesible del contenido.
-CSS nativo: diseño responsivo, variables CSS, personalización visual y adaptación a diferentes dispositivos.
-JavaScript: interacción dinámica, navegación SPA, validación de formularios y manipulación del contenido.
-Node.js y Express: desarrollo del backend y gestión de solicitudes.
-IndexedDB: almacenamiento local y persistente de información.
-Integración de Inteligencia Artificial: generación asistida de propuestas personalizadas.
-Accesibilidad web: aplicación de principios y recomendaciones de W3C/WCAG.
-🎯 Objetivos
-Objetivo general
-Desarrollar una plataforma web accesible y responsiva para estudiantes de UNIMINUTO que integre recursos educativos, actividades de autocuidado, una encuesta de bienestar y un generador de planes asistido por Inteligencia Artificial.
+## 🎯 Objetivos
 
-Objetivos específicos
-Diseñar la interfaz de usuario (UI/UX) y la arquitectura accesible de la plataforma aplicando criterios de diseño responsivo y pautas W3C/WCAG.
-Construir los módulos funcionales de recursos, pausas activas, encuesta de bienestar y generación de planes.
-Implementar las funcionalidades utilizando tecnologías web estándar como HTML5, CSS, JavaScript, Node.js y Express.
-Integrar la API de OpenAI desde un backend propio para generar propuestas personalizadas.
-Implementar almacenamiento local mediante IndexedDB para conservar los planes creados por el usuario.
-Incorporar herramientas de accesibilidad que permitan adaptar la experiencia visual y de navegación.
-🌎 Alineación con los Objetivos de Desarrollo Sostenible
-El proyecto se relaciona principalmente con el:
+**Objetivo general:** desarrollar una plataforma web accesible y responsiva para estudiantes de UNIMINUTO que integre recursos educativos, actividades de autocuidado, una encuesta de bienestar y un generador de planes asistido por Inteligencia Artificial.
 
-ODS 3 — Salud y Bienestar
-Garantizar una vida sana y promover el bienestar para todos en todas las edades.
+**Objetivos específicos:**
 
-Mente Universitaria contribuye desde un enfoque educativo y preventivo mediante herramientas digitales orientadas al autocuidado, la organización personal y la promoción del bienestar cotidiano.
+1. Diseñar la interfaz (UI/UX) y una arquitectura accesible aplicando diseño responsivo y las pautas W3C/WCAG.
+2. Construir los módulos de recursos, pausas activas, encuesta de bienestar y generación de planes.
+3. Implementar las funcionalidades con HTML5, CSS, JavaScript, Node.js y Express.
+4. Integrar un modelo de IA (vía Groq) desde un backend propio para generar propuestas personalizadas.
+5. Guardar los planes del usuario localmente con IndexedDB.
+6. Incorporar herramientas de accesibilidad para adaptar la experiencia visual y de navegación.
 
-🖥️ Funcionalidades
-La plataforma está organizada en seis páginas o vistas principales:
+## 🌎 Alineación con los ODS
 
-Vista	Descripción
-🏠 Inicio	Presentación de la plataforma, propósito y acceso rápido a sus principales funcionalidades.
-📋 Encuesta de bienestar	Autoevaluación interactiva de carácter orientativo.
-📚 Recursos	Catálogo de contenidos educativos, artículos y guías prácticas.
-🧘 Mi pausa	Espacio guiado para realizar pausas activas y ejercicios breves de relajación.
-📅 Mi plan	Herramienta para configurar, generar y guardar un plan personal de bienestar.
-🆘 Buscar apoyo	Información sobre canales de orientación y servicios de apoyo.
+**ODS 3 — Salud y bienestar:** garantizar una vida sana y promover el bienestar para todos en todas las edades. El proyecto contribuye desde un enfoque educativo y preventivo con herramientas digitales de autocuidado, organización personal y promoción del bienestar cotidiano.
 
-🤖 Integración de Inteligencia Artificial
-La Inteligencia Artificial no funcionará como una séptima página ni como un chatbot independiente.
+## 🖥️ Funcionalidades
 
-La funcionalidad estará integrada directamente dentro de la sección Mi plan.
+El sitio tiene seis páginas:
 
-Flujo general
-Usuario
-   │
-   ▼
-Formulario "Mi plan"
-   │
-   │ Objetivo
-   │ Tiempo disponible
-   │ Nivel de energía
-   │ Días a programar
-   ▼
-Frontend
-   │
-   │ Fetch API
-   ▼
-Backend Node.js + Express
-   │
-   ├── Consulta catálogo de actividades
-   │
-   └── Solicitud a API de OpenAI
-   │
-   ▼
-Propuesta estructurada
-   │
-   ▼
-Frontend
-   │
-   ▼
-Usuario revisa y decide
-   │
-   └──► Guardar en IndexedDB
+| Página | Descripción |
+|---|---|
+| 🏠 **Inicio** | Presentación de la plataforma y acceso rápido a cada sección. |
+| 📋 **Encuesta** | Autoevaluación orientativa de bienestar; el resumen se puede usar en Mi plan. |
+| 📚 **Recursos** | Catálogo con búsqueda y filtros, guías en HTML y PDF descargables. |
+| 🧘 **Mi pausa** | Respiración guiada con temporizador y espacio de escritura libre. |
+| 📅 **Mi plan** | Plan semanal con actividades manuales o propuestas por IA; exportar e importar en JSON. |
+| 🆘 **Buscar apoyo** | Canales de orientación y líneas de atención. |
 
-Proceso
-El estudiante ingresa sus parámetros iniciales:
+> [!NOTE]
+> Los números y canales de atención de **Buscar apoyo** (`server/data/support-channels.json`) deben verificarse y mantenerse actualizados antes de publicar.
 
-Objetivo personal.
-Tiempo disponible.
-Nivel de energía.
-Días que desea programar.
-El frontend envía la información de forma asíncrona al backend mediante Fetch API.
+## 🤖 Inteligencia Artificial en Mi plan
 
-El backend desarrollado con Node.js + Express procesa la solicitud.
+La IA no es un chatbot ni una página aparte: está integrada en el formulario de **Mi plan**.
 
-El servidor consulta el catálogo de actividades disponible y realiza la solicitud correspondiente a la API de OpenAI.
+1. El estudiante indica objetivo, tiempo disponible por día, nivel de energía, días y, opcionalmente, notas y el resumen de la encuesta.
+2. El navegador valida el formulario y lo envía al backend con `fetch`.
+3. El backend vuelve a validar los datos y le pide al modelo que arme el plan usando **solo dos herramientas**:
+   - `buscar_actividades`: consulta el catálogo real de actividades.
+   - `componer_plan`: organiza en los días elegidos las actividades encontradas.
+4. El servidor descarta cualquier actividad que no exista en el catálogo o que supere el tiempo disponible.
+5. El estudiante revisa la propuesta (incluido el paso a paso de lo que hizo la IA) y decide si la guarda.
+6. Si la acepta, el plan se guarda en su navegador con IndexedDB.
 
-La Inteligencia Artificial genera una propuesta estructurada de plan.
+El proveedor es **[Groq](https://console.groq.com)** con el modelo `openai/gpt-oss-20b` (configurable). La clave vive **solo en el servidor** como variable de entorno; nunca llega al navegador.
 
-El estudiante revisa la propuesta.
+```text
+Usuario ─► Formulario Mi plan ─► fetch ─► Express (validación)
+                                             │
+                                             ├─► buscar_actividades ─► catálogo JSON
+                                             ├─► componer_plan
+                                             └─► Groq (modelo de IA)
+                                             ▼
+                              Propuesta ─► Usuario revisa ─► IndexedDB
+```
 
-El estudiante decide voluntariamente si desea guardar el plan.
+## ♿ Accesibilidad
 
-En caso de aceptarlo, la información se almacena localmente mediante IndexedDB.
+- **Temas:** claro, oscuro y alto contraste.
+- **Tamaño del texto:** 85 %, 90 %, 95 %, 100 %, 125 %, 150 % y 200 %, más un botón para restablecer.
+- Las preferencias se recuerdan en el navegador.
+- Navegación completa con teclado, foco visible (`:focus-visible`) y enlace para saltar al contenido.
+- Migas de pan, HTML5 semántico, un solo `h1` por página y textos alternativos en las imágenes.
+- Formularios con etiquetas, mensajes de error claros y `aria-invalid`.
+- Contraste verificado automáticamente (mínimo 4.5:1, WCAG AA).
+- Diseño responsivo; en móvil, el botón de accesibilidad está dentro del menú.
+- Se respeta `prefers-reduced-motion`.
 
-🔐 La API Key de OpenAI debe permanecer exclusivamente en el servidor y almacenarse mediante variables de entorno. Nunca debe incluirse directamente en el JavaScript ejecutado en el navegador.
+## 🛠️ Tecnologías
 
-🆘 Buscar apoyo
-La sección Buscar apoyo tiene una función exclusivamente informativa y de derivación responsable.
+| Tecnología | Uso |
+|---|---|
+| HTML5 | Estructura semántica y accesible. |
+| CSS nativo | Variables, temas, diseño responsivo. |
+| JavaScript (módulos ES) | Lógica, validación y DOM; se empaqueta con esbuild en `js/app.bundle.js`. |
+| Node.js 22 + Express 5 | Servidor y API. |
+| Groq API | Generación asistida de planes. |
+| IndexedDB / localStorage | Planes, encuesta y preferencias en el navegador. |
+| Vercel | Despliegue. |
+| Git y GitHub | Control de versiones. |
+| Figma | Diseño y prototipado UI/UX. |
 
-Contemplará información como:
+## 🗄️ Arquitectura
 
-Canales institucionales de orientación de UNIMINUTO.
-Información sobre servicios de orientación psicológica.
-Líneas de atención disponibles según la ubicación.
-Números de emergencia nacionales y locales.
-Recursos de apoyo en situaciones que requieran atención profesional.
-Nota: Los números y canales de atención deben verificarse y mantenerse actualizados antes de publicar la plataforma.
+```text
+┌──────────── Navegador ────────────┐        ┌────────── Servidor (Express) ──────────┐
+│ HTML + CSS + JavaScript           │ fetch  │ Validación                             │
+│ Encuesta, Recursos, Pausa, Plan   │ ─────► │ Catálogo de recursos (JSON)            │
+│ Accesibilidad                     │        │ Canales de apoyo (JSON)                │
+│ IndexedDB: planes y encuesta      │        │ Agente de planes ─────► Groq API       │
+└───────────────────────────────────┘        └────────────────────────────────────────┘
+```
 
-♿ Accesibilidad
-La accesibilidad constituye uno de los componentes principales del proyecto.
+No hay cuentas de usuario ni base de datos externa: la información personal se queda en el navegador de cada estudiante.
 
-Personalización visual
-La plataforma contempla:
+## 📁 Estructura del proyecto
 
-☀️ Modo claro
-🌙 Modo oscuro
-◼️ Modo alto contraste
-🔤 Ajuste del tamaño de fuente.
-🔄 Botón para restablecer las configuraciones.
-Escala de tipografía
-Se contemplan los siguientes porcentajes:
-
-85% · 90% · 95% · 100% · 125% · 150% · 200%
-
-Navegación
-La plataforma contempla:
-
-Navegación mediante teclado.
-Estados de foco visibles mediante :focus-visible.
-Migas de pan en las vistas internas.
-Pie de página persistente.
-Enlaces directos a las seis secciones principales.
-Estructura HTML5 semántica.
-Contraste adecuado entre elementos visuales.
-Diseño adaptable a diferentes tamaños de pantalla.
-📝 Formularios y validación
-El formulario principal estará ubicado en la sección Mi plan.
-
-La validación se realizará en dos niveles:
-
-Frontend
-JavaScript será responsable de:
-
-Verificar campos obligatorios.
-Validar tipos de datos.
-Comprobar rangos permitidos.
-Mostrar mensajes de error comprensibles.
-Evitar el envío de información incompleta.
-Backend
-Las mismas reglas de validación deberán implementarse en Node.js/Express.
-
-Esto permite que el servidor no dependa exclusivamente de las validaciones realizadas en el navegador y evita aceptar datos inconsistentes o manipulados.
-
-Las expresiones regulares se utilizarán únicamente cuando sean apropiadas para validar formatos concretos; no deben considerarse un mecanismo de seguridad por sí mismas.
-
-🛠️ Tecnologías utilizadas
-Tecnología	Uso
-HTML5	Estructura semántica y accesible del contenido.
-CSS3 / CSS nativo	Estilos, variables, temas, responsividad y personalización visual.
-JavaScript	Lógica de la aplicación, interacción, formularios y renderizado dinámico.
-Fetch API	Comunicación asíncrona entre frontend y backend.
-Node.js	Entorno de ejecución del backend.
-Express	Framework para la creación de la API y gestión de solicitudes HTTP.
-IndexedDB	Almacenamiento local y persistente de los planes del usuario.
-OpenAI API	Generación asistida de propuestas personalizadas.
-Git	Control de versiones.
-GitHub	Repositorio y colaboración.
-Figma	Diseño y prototipado UI/UX.
-
-🗄️ Arquitectura y almacenamiento
-La aplicación utiliza una arquitectura cliente-servidor:
-
-┌───────────────────────────────┐
-│          FRONTEND             │
-│                               │
-│ HTML5 + CSS + JavaScript      │
-│                               │
-│ - Interfaz                    │
-│ - Formularios                 │
-│ - Accesibilidad               │
-│ - Encuesta                    │
-│ - Mi plan                     │
-└───────────────┬───────────────┘
-                │
-           Fetch API
-                │
-                ▼
-┌───────────────────────────────┐
-│           BACKEND             │
-│                               │
-│ Node.js + Express             │
-│                               │
-│ - Validación                  │
-│ - Procesamiento               │
-│ - Catálogo de actividades     │
-│ - Integración con OpenAI      │
-└───────────────┬───────────────┘
-                │
-                ▼
-        ┌───────────────┐
-        │  OpenAI API   │
-        └───────────────┘
-
-
-┌───────────────────────────────┐
-│          NAVEGADOR            │
-│                               │
-│          IndexedDB            │
-│                               │
-│  Plan personal del usuario    │
-└───────────────────────────────┘
-
-Persistencia local
-Los planes personalizados se almacenarán localmente en el navegador mediante IndexedDB.
-
-Esto permite conservar la información sin necesidad de crear una cuenta o almacenar los planes personales en una base de datos externa.
-
-Seguridad
-Las solicitudes relacionadas con Inteligencia Artificial requieren conexión a Internet.
-
-La clave de acceso a la API deberá almacenarse en una variable de entorno del backend:
-
-OPENAI_API_KEY=tu_clave_aqui
-
-El archivo .env no debe subirse al repositorio.
-
-Se recomienda incluirlo en .gitignore:
-
-.env
-node_modules/
-
-📁 Estructura del proyecto
-mente-universitaria/
-│
+```text
+Mente-Universitaria/
+├── api/index.js              # Entrada de la API para Vercel
 ├── assets/
-│   ├── audio/
-│   │   └── .gitkeep
-│   │
-│   ├── img/
-│   │   ├── buscar-apoyo.png
-│   │   ├── hoja.png
-│   │   ├── inicio-estudiantes.png
-│   │   ├── portada-recursos.png
-│   │   ├── recurso-descanso.png
-│   │   ├── recurso-destacado.png
-│   │   ├── recurso-organizacion.png
-│   │   └── recurso-presion.png
-│   │
-│   └── videos/
-│       └── .gitkeep
-│
-├── css/
-│   └── .gitkeep
-│
+│   ├── guides/               # Guías en HTML
+│   ├── icons/                # Logo
+│   ├── images/               # Imágenes .webp
+│   └── pdfs/                 # Guías en PDF
+├── css/                      # comun.css + un archivo por página
 ├── js/
-│   └── .gitkeep
-│
-├── pages/
-│   ├── buscar-apoyo.html
-│   ├── encuesta.html
-│   ├── mi-pausa.html
-│   ├── mi-plan.html
-│   └── recursos.html
-│
+│   ├── app.js                # Punto de entrada
+│   ├── app.bundle.js         # Generado con npm run build:js (no editar)
+│   ├── components/           # Accesibilidad, notificaciones
+│   ├── pages/                # Un controlador por página
+│   ├── services/             # API e IndexedDB
+│   └── utils/                # DOM y validación
+├── pages/                    # encuesta, recursos, mi-pausa, mi-plan, buscar-apoyo
+├── scripts/                  # Compilación y verificaciones
+├── server/
+│   ├── app.js                # Configuración de Express
+│   ├── index.js              # Servidor local
+│   ├── config/  controllers/  routes/  middleware/  errors/
+│   ├── services/             # Recursos y agente de planes
+│   ├── tools/                # Herramientas que usa la IA
+│   ├── gateways/             # Conexión con Groq
+│   ├── repositories/         # Lectura de los JSON
+│   ├── validators/           # Validación del plan
+│   └── data/                 # resources.json, support-channels.json
+├── tests/                    # Pruebas con node --test
+├── .env.example
 ├── index.html
-├── .gitignore
 ├── package.json
-└── README.md
+└── vercel.json
+```
 
-🎨 Diseño UI/UX
-El diseño y prototipado de la plataforma se desarrollan utilizando Figma, con énfasis en:
+## 💻 Cómo ejecutarlo en tu computador
 
-Claridad visual.
-Navegación sencilla.
-Diseño responsivo.
-Accesibilidad.
-Jerarquía visual.
-Consistencia entre las diferentes vistas.
-Reducción de la carga cognitiva durante la navegación.
-Prototipo
-Ver prototipo en Figma
+**Requisitos:** [Node.js 22](https://nodejs.org) y Git.
 
-🔗 Repositorio
-El código fuente del proyecto se encuentra disponible en GitHub:
+```bash
+git clone https://github.com/DavidGarzon9580/Mente-Universitaria.git
+cd Mente-Universitaria
+npm install
+```
 
-Repositorio de Mente Universitaria en GitHub
+Crea el archivo `.env` a partir del ejemplo:
 
-📚 Referencias bibliográficas
-Organización de las Naciones Unidas. (2015). Objetivo 3: Garantizar una vida sana y promover el bienestar para todos en todas las edades. Objetivos de Desarrollo Sostenible.
-Objetivo 3 — Naciones Unidas
+```bash
+# Windows (PowerShell)
+copy .env.example .env
+# macOS / Linux
+cp .env.example .env
+```
 
-World Wide Web Consortium (W3C). (2023). Web Content Accessibility Guidelines (WCAG) 2.1. W3C Recommendation.
-WCAG 2.1 — W3C
+Abre `.env` y pega tu clave de Groq en `GROQ_API_KEY` (se crea gratis en [console.groq.com/keys](https://console.groq.com/keys)). Sin clave, todo funciona excepto el generador con IA.
 
-Revista de Salud Pública, 10(5), 831–839.
-https://doi.org/10.1590/S0124-00642008000500015
+```bash
+npm run dev
+```
 
-📄 Estado del proyecto
-Proyecto académico independiente — En desarrollo.
+Abre <http://localhost:3000>.
 
-Las funcionalidades, contenidos, canales de apoyo e integraciones externas pueden estar sujetos a cambios durante el desarrollo y las pruebas de la plataforma.
+> [!CAUTION]
+> El archivo `.env` está en `.gitignore`. **Nunca lo subas a GitHub ni compartas tu clave.** Si se expone, revócala en Groq y crea una nueva.
 
+### Variables de entorno
+
+| Variable | Obligatoria | Valor por defecto | Descripción |
+|---|---|---|---|
+| `GROQ_API_KEY` | Solo para la IA | — | Clave de la API de Groq. |
+| `GROQ_MODEL` | No | `openai/gpt-oss-20b` | Modelo de Groq. |
+| `GROQ_TIMEOUT_MS` | No | `30000` | Tiempo máximo de espera de la IA (ms). |
+| `PORT` | No | `3000` | Puerto del servidor local. |
+| `NODE_ENV` | No | `development` | Entorno de ejecución. |
+
+### Scripts
+
+| Comando | Qué hace |
+|---|---|
+| `npm run dev` | Compila el JS y arranca el servidor con recarga automática. |
+| `npm start` | Arranca el servidor. |
+| `npm run build:js` | Genera `js/app.bundle.js`. |
+| `npm run build:vercel` | Compila y copia el sitio a `public/` para Vercel. |
+| `npm test` | Ejecuta las pruebas. |
+| `npm run check` | Revisa CSS, sintaxis, estructura HTML y contraste. |
+
+> [!TIP]
+> Si cambias algo en `js/`, ejecuta `npm run build:js` antes de hacer commit: el navegador carga `js/app.bundle.js`.
+
+## 🚀 Despliegue en Vercel
+
+El proyecto ya incluye `vercel.json`: las páginas se publican como archivos estáticos desde `public/` y la API corre como función en `api/index.js`.
+
+1. Importa el repositorio en [vercel.com/new](https://vercel.com/new).
+2. Deja **Framework Preset** en *Other* y no cambies el Build Command ni el Output Directory (los toma de `vercel.json`).
+3. En **Settings → Environment Variables** agrega `GROQ_API_KEY` (y, si quieres, `GROQ_MODEL`).
+4. Despliega. Cada `git push` a `main` vuelve a desplegar automáticamente.
+
+Si agregas la variable después del primer despliegue, haz **Redeploy** para que se aplique.
+
+## 🔌 API
+
+| Método | Ruta | Descripción |
+|---|---|---|
+| `GET` | `/api/health` | Estado del servidor e indica si la IA está configurada. |
+| `GET` | `/api/resources` | Catálogo. Filtros: `category`, `energy`, `maxDuration`, `search`. |
+| `GET` | `/api/support-channels` | Canales de apoyo. |
+| `POST` | `/api/plans/recommendation` | Genera un plan con IA (máx. 5 solicitudes por minuto). |
+
+Ejemplo de cuerpo para `POST /api/plans/recommendation`:
+
+```json
+{
+  "title": "Semana de parciales",
+  "objective": "concentracion",
+  "duration": 15,
+  "energy": "media",
+  "days": ["lunes", "miercoles", "viernes"],
+  "notes": "Tengo parciales el jueves"
+}
+```
+
+## ✅ Pruebas y verificaciones
+
+```bash
+npm test        # validación, catálogo, agente de IA, gateway de Groq e integración
+npm run check   # CSS, paquete JS sincronizado, HTML semántico, ARIA y contraste
+```
+
+Las pruebas no llaman a Groq: usan respuestas simuladas, así que funcionan sin clave.
+
+## 🎨 Diseño UI/UX
+
+El diseño se trabajó en Figma con énfasis en claridad visual, navegación sencilla, diseño responsivo, accesibilidad, jerarquía visual, consistencia entre vistas y baja carga cognitiva.
+
+## 📚 Referencias
+
+- Organización de las Naciones Unidas. (2015). *Objetivo 3: Garantizar una vida sana y promover el bienestar para todos en todas las edades*. Objetivos de Desarrollo Sostenible. <https://www.un.org/sustainabledevelopment/es/health/>
+- World Wide Web Consortium (W3C). (2023). *Web Content Accessibility Guidelines (WCAG) 2.1*. W3C Recommendation. <https://www.w3.org/TR/WCAG21/>
+- *Revista de Salud Pública*, 10(5), 831–839. (2008). <https://doi.org/10.1590/S0124-00642008000500015>
+
+## 📄 Estado del proyecto
+
+Proyecto académico independiente, en desarrollo. Las funcionalidades, contenidos, canales de apoyo e integraciones pueden cambiar durante el desarrollo y las pruebas.
